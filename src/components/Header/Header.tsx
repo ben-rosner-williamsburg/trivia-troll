@@ -1,14 +1,18 @@
 import React from 'react';
-import  HappyTroll from '../HappyTroll/HappyTroll'
+import './Header.scss';
+import HappyTrollImage from '../HappyTroll/HappyTroll';
 
-
-type HeaderProps = {
-  title: string;
-};
+// type HeaderProps = {
+//   title: string;
+// };
 
 const Header = () => {
-  return <h1>Trivia Troll</h1>;
-  <HappyTroll />
+  return (
+    <div className="header">
+      <h1>Trivia Troll</h1>
+      <HappyTrollImage />
+    </div>
+  );
 };
 
 export default Header;

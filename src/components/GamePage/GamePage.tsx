@@ -1,5 +1,4 @@
-import QuestionCard from '../QuestionCard/QuestionCard'
-
+import QuestionCard from '../QuestionCard/QuestionCard';
 
 const GamePage = () => {
   return (
@@ -10,4 +9,4 @@ const GamePage = () => {
   );
 };
 
-export default GamePage
+export default GamePage;
