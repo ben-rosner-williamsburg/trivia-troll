@@ -1,11 +1,12 @@
-import Header from "../Header/Header"
+import { Link } from "react-router-dom"
 
 const ErrorPage = () => {
   return (
     <main>
-      {/* <Header/> */}
       <h1> Opps you shouldn't be here! Please go back</h1>
-      <button className="return-to-game-btn">Return to Game</button>
+      <Link to="/game">
+        <button className="return-to-game-btn">Return to Game</button>
+      </Link>
     </main>
   )
 };
