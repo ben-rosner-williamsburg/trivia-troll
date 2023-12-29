@@ -11,6 +11,7 @@ import ErrorPage from '../ErrorPage/ErrorPage'
 function App() {
   return (
     <main className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<LogoPage />} />
         <Route path="/main" element={<MainPage />} />
