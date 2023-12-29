@@ -1,13 +1,11 @@
-import HappyTroll from '../HappyTroll/HappyTroll'
+import React from 'react';
 
 const LogoPage = () => {
   return (
-    <div> 
-      <h1>Trivia Troll</h1>
-      <HappyTroll />
-      <button className='enter-game-btn'>Enter</button>
+    <div>
+      <button className="enter-game-btn">Enter</button>
     </div>
-  )
-}
+  );
+};
 
-export default LogoPage
+export default LogoPage;

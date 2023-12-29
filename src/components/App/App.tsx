@@ -5,12 +5,13 @@ import Header from '../Header/Header';
 import LogoPage from '../LogoPage/LogoPage';
 import MainPage from '../MainPage/MainPage';
 import GamePage from '../GamePage/GamePage';
-import EndPage from '../EndPage/EndPage'
-import ErrorPage from '../ErrorPage/ErrorPage'
+import EndPage from '../EndPage/EndPage';
+import ErrorPage from '../ErrorPage/ErrorPage';
 
 function App() {
   return (
     <main className="App">
+      <Header />
       <Routes>
         <Route path="/" element={<LogoPage />} />
         <Route path="/main" element={<MainPage />} />
