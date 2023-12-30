@@ -14,12 +14,10 @@ import { getQuestions } from '../../apiCall';
 function App() {
 
   const [questions, setQuestions] = useState<Question | null>(null);
-  // const [questions, setQuestions] = useState<Question[] | null>(null);
 
   const fetchData = async () => {
     try {
       const data = await getQuestions()
-      // console.log(data)
       if (data !== "DUPLICATE DEV FETCH") {
         setQuestions(data)
       }
@@ -29,28 +27,8 @@ function App() {
 }
 
   useEffect(() => {
-  //   .then(questions => {
-  //   const triviaQuestions = questions.results;
-  //   setQuestions(triviaQuestions); // Update state directly with the fetched data
-  // })
-  //   .catch(err => console.error(err));
-    // getQuestions(setQuestions)
     fetchData()
   }, [fetchData])
-
-  // useEffect(() => {
-  //   fetchData();
-  // }, []);
-
-  // const fetchData = () => {
-  //   getQuestions()
-  //     .then((data) => {
-  //       setQuestions(data.results)
-  //     })
-  //     .catch((error) => {
-  //       setError(error.message)
-  //     })
-  // }
 
   return (
     <main className="App">
