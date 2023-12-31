@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
@@ -12,23 +11,20 @@ import { Question } from '../../types';
 import { getQuestions } from '../../apiCall';
 
 function App() {
-
-  const [questions, setQuestions] = useState<Question | null>(null);
+  const [questions, setQuestions] = useState<Question[]>([]);
 
   const fetchData = async () => {
     try {
-      const data = await getQuestions()
-      if (data !== "DUPLICATE DEV FETCH") {
-        setQuestions(data)
-      }
+      const data = await getQuestions();
+      setQuestions(data);
     } catch (error) {
-      console.log("ERROR:", error)
+      console.log('ERROR:', error);
     }
-}
+  };
 
   useEffect(() => {
-    fetchData()
-  }, [fetchData])
+    fetchData();
+  }, []);
 
   return (
     <main className="App">
@@ -36,7 +32,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LogoPage />} />
         <Route path="/main" element={<MainPage />} />
-        <Route path="/game" element={<GamePage />} />
+        <Route path="/game" element={<GamePage questions={questions} />} />
         <Route path="/end" element={<EndPage />} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>

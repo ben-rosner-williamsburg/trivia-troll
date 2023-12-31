@@ -1,33 +1,28 @@
-const QuestionCard = () => {
+import { QuestionCardProps } from '../../types';
+import arrayShuffle from 'array-shuffle';
+
+const QuestionCard = ({ questions }: QuestionCardProps) => {
+  const shuffleAnswers = (
+    correctAnswer: string,
+    incorrect_answers: string[],
+  ) => {
+    const answers = [correctAnswer, ...incorrect_answers];
+    return arrayShuffle(answers);
+  };
+
   return (
     <main>
-      <h2>Question</h2>
-      <label>
-        <input
-          type="radio"
-          value="option1"
-          // checked={selectedOption === 'option1'}
-          // onChange ={handleInputChange}
-        />
-        <input
-          type="radio"
-          value="option2"
-          // checked={selectedOption === 'option2'}
-          // onChange ={handleInputChange}
-        />
-        <input
-          type="radio"
-          value="option3"
-          // checked={selectedOption === 'option3'}
-          // onChange ={handleInputChange}
-        />
-        <input
-          type="radio"
-          value="option4"
-          // checked={selectedOption === 'option4'}
-          // onChange ={handleInputChange}
-        />
-      </label>
+      {questions.map((question, index) => (
+        <div key={index}>
+          <h2>{question.question}</h2>
+          {shuffleAnswers(
+            question.correctAnswer,
+            question.incorrectAnswers,
+          ).map((answer, idx) => (
+            <button key={idx}>{answer}</button>
+          ))}
+        </div>
+      ))}
     </main>
   );
 };

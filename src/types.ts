@@ -5,4 +5,9 @@ export interface Question {
   question: string;
   correctAnswer: string;
   incorrectAnswers: string[];
-};
+}
+
+export interface QuestionCardProps {
+  questionInfo: Question;
+  questions: Question[];
+}
