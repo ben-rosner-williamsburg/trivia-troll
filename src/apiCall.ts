@@ -1,17 +1,27 @@
-import { Question } from './types'
-import { Dispatch, SetStateAction } from 'react';
+import { Question } from './types';
 
-export async function getQuestions() {
-  return fetch("https://opentdb.com/api.php?amount=5&difficulty=easy&type=multiple")
-    .then(response => {
-      console.log(response)
-      if (response.ok) {
-        return response.json();
-      } else if (response.status !== 429) {
-      throw Error("GET request failed!");
-      } else {
-        return "DUPLICATE DEV FETCH"
-      }
-    })
-    .catch(err => console.error(err));
+export const getQuestions = async (): Promise<Question[]> => {
+  try {
+    const response = await fetch(
+      'https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple',
+    );
+    if (response.ok) {
+      const data = await response.json();
+      return data.results.map((result: any) => ({
+        category: result.category,
+        type: result.type,
+        difficulty: result.difficulty,
+        question: result.question,
+        correctAnswer: result.correct_answer,
+        incorrectAnswers: result.incorrect_answers,
+      })) as Question[];
+    } else if (response.status === 429) {
+      throw new Error('Too many requests. Try again later.');
+    } else {
+      throw new Error('GET request failed!');
+    }
+  } catch (error) {
+    console.error('ERROR:', error);
+    throw error;
+  }
 };

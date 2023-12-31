@@ -1,10 +1,9 @@
 import QuestionCard from '../QuestionCard/QuestionCard';
 
-const GamePage = () => {
+const GamePage = ({ questionInfo, questions }: any) => {
   return (
     <main>
-      <QuestionCard />
-      {/* jsx for conditionally rendering the answer and next quesiton button */}
+      <QuestionCard questionInfo={questionInfo} questions={questions} />
     </main>
   );
 };
