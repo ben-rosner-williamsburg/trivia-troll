@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import DropDownMenu from '../DropDownMenu/DropDownMenu';
 
-const MainPage = () => {
+const MainPage = ({ setSelectedDifficulty }: any) => {
   return (
     <div>
-      <h1>Select Category</h1>
+      <DropDownMenu setSelectedDifficulty={setSelectedDifficulty} />
       <Link to="/game">
         <button className="play-btn">Play Game</button>
       </Link>

@@ -12,10 +12,11 @@ import { getQuestions } from '../../apiCall';
 
 function App() {
   const [questions, setQuestions] = useState<Question[]>([]);
+  const [selectedDifficulty, setSelectedDifficulty] = useState('easy')
 
   const fetchData = async () => {
     try {
-      const data = await getQuestions();
+      const data = await getQuestions(selectedDifficulty);
       setQuestions(data);
     } catch (error) {
       console.log('ERROR:', error);
@@ -31,7 +32,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<LogoPage />} />
-        <Route path="/main" element={<MainPage />} />
+        <Route path="/main" element={<MainPage setSelectedDifficulty={setSelectedDifficulty}/>} />
         <Route path="/game" element={<GamePage questions={questions} />} />
         <Route path="/end" element={<EndPage />} />
         <Route path="/*" element={<ErrorPage />} />
