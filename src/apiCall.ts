@@ -1,9 +1,11 @@
 import { Question } from './types';
 
-export const getQuestions = async (): Promise<Question[]> => {
+export const getQuestions = async (
+  selectedDifficulty: string,
+): Promise<Question[]> => {
   try {
     const response = await fetch(
-      'https://opentdb.com/api.php?amount=1&difficulty=easy&type=multiple',
+      `https://opentdb.com/api.php?amount=1&type=multiple&difficulty=${selectedDifficulty}`,
     );
     if (response.ok) {
       const data = await response.json();
