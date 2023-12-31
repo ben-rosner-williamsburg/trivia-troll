@@ -1,9 +1,9 @@
 import QuestionCard from '../QuestionCard/QuestionCard';
 
-const GamePage = ({ questionInfo, questions }: any) => {
+const GamePage = ({ questionInfo, questions, selectedDifficulty }: any) => {
   return (
     <main>
-      <QuestionCard questionInfo={questionInfo} questions={questions} />
+<QuestionCard questionInfo={questionInfo} questions={questions} selectedDifficulty={selectedDifficulty} />
     </main>
   );
 };
