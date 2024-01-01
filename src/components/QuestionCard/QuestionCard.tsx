@@ -24,7 +24,9 @@ const QuestionCard = ({
     setCorrectAnswer(correctAnswer);
     setShowCorrectAnswer(true);
     setShowButton(true);
-    increaseScore(setScore);
+    if (answer === correctAnswer) {
+      increaseScore(setScore);
+    }
   };
 
   const increaseScore = (setScore: any) => {
