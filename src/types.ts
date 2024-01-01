@@ -12,4 +12,5 @@ export interface QuestionCardProps {
   questions: Question[];
   selectedDifficulty: any;
   setScore: (score: number) => void;
+  setQuestions: (questions: Question[]) => void;
 }

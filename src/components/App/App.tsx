@@ -39,7 +39,13 @@ function App() {
         />
         <Route
           path="/game"
-          element={<GamePage questions={questions} setScore={setScore} />}
+          element={
+            <GamePage
+              questions={questions}
+              setScore={setScore}
+              setQuestions={setQuestions}
+            />
+          }
         />
         <Route path="/end" element={<EndPage />} />
         <Route path="/*" element={<ErrorPage />} />

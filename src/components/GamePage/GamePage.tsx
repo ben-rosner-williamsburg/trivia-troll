@@ -5,6 +5,7 @@ const GamePage = ({
   questions,
   selectedDifficulty,
   setScore,
+  setQuestions,
 }: any) => {
   return (
     <main>
@@ -13,6 +14,7 @@ const GamePage = ({
         questions={questions}
         selectedDifficulty={selectedDifficulty}
         setScore={setScore}
+        setQuestions={setQuestions}
       />
     </main>
   );
