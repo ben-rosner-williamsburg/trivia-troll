@@ -7,10 +7,12 @@ const QuestionCard = ({
   questions,
   selectedDifficulty,
   setScore,
+  setQuestions,
 }: QuestionCardProps) => {
   const [correctAnswer, setCorrectAnswer] = useState<string>('');
   const [showCorrectAnswer, setShowCorrectAnswer] = useState<boolean>(false);
   const [showButton, setShowButton] = useState<boolean>(false);
+  const [questionIndex, setQuestionIndex] = useState(0);
 
   const shuffleAnswers = (
     correctAnswer: string,
@@ -24,7 +26,10 @@ const QuestionCard = ({
     setCorrectAnswer(correctAnswer);
     setShowCorrectAnswer(true);
     setShowButton(true);
-    increaseScore(setScore);
+
+    if (answer === correctAnswer) {
+      increaseScore(setScore);
+    }
   };
 
   const increaseScore = (setScore: any) => {
@@ -37,12 +42,14 @@ const QuestionCard = ({
 
   const handleButtonClick = async () => {
     try {
-      const newQuestions = await getQuestions(selectedDifficulty);
-
-      if (newQuestions && newQuestions.length > 0) {
-        setCorrectAnswer('');
-        setShowCorrectAnswer(false);
-        setShowButton(false);
+      if (questionIndex >= questions.length) {
+        const newQuestions = await getQuestions(selectedDifficulty);
+        if (newQuestions && newQuestions.length > 0) {
+          setQuestions(newQuestions);
+          setQuestionIndex(questionIndex + 1);
+        }
+      } else {
+        setQuestionIndex(questionIndex + 1);
       }
     } catch (error) {
       console.error('Error fetching new question:', error);
@@ -51,16 +58,21 @@ const QuestionCard = ({
 
   return (
     <main>
-      {questions.map((question, index) => (
-        <div key={index}>
-          <h2>{question.question}</h2>
+      {questions.length > 0 && questionIndex < questions.length && (
+        <div key={questionIndex}>
+          <h2>{questions[questionIndex].question}</h2>
           {shuffleAnswers(
-            question.correctAnswer,
-            question.incorrectAnswers,
+            questions[questionIndex].correctAnswer,
+            questions[questionIndex].incorrectAnswers,
           ).map((answer, idx) => (
             <button
               key={idx}
-              onClick={() => handleAnswerClick(answer, question.correctAnswer)}
+              onClick={() =>
+                handleAnswerClick(
+                  answer,
+                  questions[questionIndex].correctAnswer,
+                )
+              }
             >
               {answer}
             </button>
@@ -79,7 +91,7 @@ const QuestionCard = ({
             </div>
           )}
         </div>
-      ))}
+      )}
     </main>
   );
 };
