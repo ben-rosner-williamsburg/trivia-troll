@@ -8,6 +8,8 @@ export interface Question {
 }
 
 export interface QuestionCardProps {
-  questionInfo: Question;
+  questionInfo: any;
   questions: Question[];
+  selectedDifficulty: any;
+  setScore: (score: number) => void;
 }

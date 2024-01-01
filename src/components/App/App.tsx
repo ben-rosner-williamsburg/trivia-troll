@@ -12,7 +12,8 @@ import { getQuestions } from '../../apiCall';
 
 function App() {
   const [questions, setQuestions] = useState<Question[]>([]);
-  const [selectedDifficulty, setSelectedDifficulty] = useState('easy')
+  const [selectedDifficulty, setSelectedDifficulty] = useState('easy');
+  const [score, setScore] = useState<number>(0);
 
   const fetchData = async () => {
     try {
@@ -32,8 +33,14 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<LogoPage />} />
-        <Route path="/main" element={<MainPage setSelectedDifficulty={setSelectedDifficulty}/>} />
-        <Route path="/game" element={<GamePage questions={questions} />} />
+        <Route
+          path="/main"
+          element={<MainPage setSelectedDifficulty={setSelectedDifficulty} />}
+        />
+        <Route
+          path="/game"
+          element={<GamePage questions={questions} setScore={setScore} />}
+        />
         <Route path="/end" element={<EndPage />} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>

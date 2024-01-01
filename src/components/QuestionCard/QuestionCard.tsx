@@ -1,17 +1,16 @@
 import { QuestionCardProps } from '../../types';
 import arrayShuffle from 'array-shuffle';
-import { useState } from 'react'
-import { getQuestions } from '../../apiCall'
+import { useState } from 'react';
+import { getQuestions } from '../../apiCall';
 
-interface Props extends QuestionCardProps {
-  selectedDifficulty: string;
-}
-
-const QuestionCard = ({ questions, selectedDifficulty }: Props) => {
+const QuestionCard = ({
+  questions,
+  selectedDifficulty,
+  setScore,
+}: QuestionCardProps) => {
   const [correctAnswer, setCorrectAnswer] = useState<string>('');
   const [showCorrectAnswer, setShowCorrectAnswer] = useState<boolean>(false);
   const [showButton, setShowButton] = useState<boolean>(false);
-
 
   const shuffleAnswers = (
     correctAnswer: string,
@@ -25,27 +24,30 @@ const QuestionCard = ({ questions, selectedDifficulty }: Props) => {
     setCorrectAnswer(correctAnswer);
     setShowCorrectAnswer(true);
     setShowButton(true);
-  }
+    increaseScore(setScore);
+  };
+
+  const increaseScore = (setScore: any) => {
+    setScore((prevScore: number) => {
+      const newScore = prevScore + 1;
+      console.log('New Score:', newScore);
+      return newScore;
+    });
+  };
 
   const handleButtonClick = async () => {
     try {
       const newQuestions = await getQuestions(selectedDifficulty);
 
-      // Assuming getQuestions returns an array with one question
       if (newQuestions && newQuestions.length > 0) {
         setCorrectAnswer('');
         setShowCorrectAnswer(false);
         setShowButton(false);
-        // Assuming you're updating the existing questions state
-        // This might vary based on your application's logic
-        // Set the new question to the state
-        // setQuestions(newQuestions);
       }
     } catch (error) {
       console.error('Error fetching new question:', error);
     }
   };
-
 
   return (
     <main>
@@ -58,18 +60,21 @@ const QuestionCard = ({ questions, selectedDifficulty }: Props) => {
           ).map((answer, idx) => (
             <button
               key={idx}
-              onClick={() =>
-                handleAnswerClick(answer, question.correctAnswer)
-              }
+              onClick={() => handleAnswerClick(answer, question.correctAnswer)}
             >
               {answer}
             </button>
           ))}
-            {showCorrectAnswer && (
+          {showCorrectAnswer && (
             <div>
               <p>Correct Answer: {correctAnswer}</p>
               {showButton && (
-                <button className="next-question-btn" onClick={handleButtonClick}>Next Question</button>
+                <button
+                  className="next-question-btn"
+                  onClick={handleButtonClick}
+                >
+                  Next Question
+                </button>
               )}
             </div>
           )}
