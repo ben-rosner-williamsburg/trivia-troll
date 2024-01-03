@@ -3,7 +3,7 @@
   justify-content: flex-start;
   align-items: center;
   background-color: #3a5260;
-  height: 100vh
+  height: 100vh;
 }
 
 .happy-troll-logo-page {
@@ -22,8 +22,7 @@
   border-radius: 20px;
   width: 5em;
   padding: 0.2em 1em;
-  
- 
+  font-family: 'Irish grover';
 }
 
 .enter-game-btn {
@@ -35,12 +34,12 @@
   font-size: 3.5em;
   font-family: 'Irish grover';
   color: #dbd9cf;
-  margin-top: 5%; 
+  margin-top: 5%;
   margin-left: 13em;
   cursor: pointer;
-  box-shadow: 2px 2px 2px 2px #473a31
+  box-shadow: 2px 2px 2px 2px #473a31;
 }
 
-.enter-game-btn:hover  {
-  background-color: #473a31; 
+.enter-game-btn:hover {
+  background-color: #473a31;
 }
