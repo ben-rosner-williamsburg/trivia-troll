@@ -1,0 +1,45 @@
+.logo-page {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #3a5260;
+  height: 100vh;
+}
+
+.happy-troll-logo-page {
+  width: 20vw;
+  margin-top: 2%;
+  order: -1;
+  margin-left: 6em;
+}
+
+.trivia-troll-logo-title {
+  font-size: 7em;
+  margin-left: 4.5em;
+  margin-top: -35%;
+  background-color: #dbd9cf;
+  color: #3a5260;
+  border-radius: 20px;
+  width: 5em;
+  padding: 0.2em 1em;
+  font-family: 'Irish grover';
+}
+
+.enter-game-btn {
+  background-color: #4f453e;
+  border: none;
+  border-radius: 15px;
+  width: 20vw;
+  height: 2em;
+  font-size: 3.5em;
+  font-family: 'Irish grover';
+  color: #dbd9cf;
+  margin-top: 5%;
+  margin-left: 13em;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px #473a31;
+}
+
+.enter-game-btn:hover {
+  background-color: #473a31;
+}
