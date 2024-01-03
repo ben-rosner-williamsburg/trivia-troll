@@ -9,6 +9,7 @@ const navigate = useNavigate()
 const scoreData = {score}
   return (
     <div>
+      <h4>You've completed all the questions!</h4>
       <p>Your Score: {scoreData.score}</p>
       <button onClick={backtoMainClick} className="return-to-main">Back to Start</button>
     </div>
