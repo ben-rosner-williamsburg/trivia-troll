@@ -1,16 +1,15 @@
 import './EndPage.scss'
 import { useNavigate } from 'react-router-dom'
-
-const EndPage = () => {
+const EndPage = ({score}: any) => {
 const navigate = useNavigate()
 
-  const backtoMainClick = () => {
+ const backtoMainClick = () => {
     navigate('/')
   }
-
+const scoreData = {score}
   return (
     <div>
-      <p>Your Score</p>
+      <p>Your Score: {scoreData.score}</p>
       <button onClick={backtoMainClick} className="return-to-main">Back to Start</button>
     </div>
   );
