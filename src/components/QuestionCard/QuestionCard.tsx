@@ -8,6 +8,8 @@ const QuestionCard = ({
   selectedDifficulty,
   setScore,
   setQuestions,
+  increaseScore,
+  handleScoreUpdate,
 }: QuestionCardProps) => {
   const [correctAnswer, setCorrectAnswer] = useState<string>('');
   const [showCorrectAnswer, setShowCorrectAnswer] = useState<boolean>(false);
@@ -28,16 +30,9 @@ const QuestionCard = ({
     setShowButton(true);
 
     if (answer === correctAnswer) {
-      increaseScore(setScore);
+      increaseScore();
     }
-  };
-
-  const increaseScore = (setScore: any) => {
-    setScore((prevScore: number) => {
-      const newScore = prevScore + 1;
-      console.log('New Score:', newScore);
-      return newScore;
-    });
+    handleScoreUpdate();
   };
 
   const handleButtonClick = async () => {
