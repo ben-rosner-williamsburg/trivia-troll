@@ -47,7 +47,7 @@ function App() {
             />
           }
         />
-        <Route path="/end" element={<EndPage />} />
+        <Route path="/end" element={<EndPage score={score} />} />
         <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </main>
