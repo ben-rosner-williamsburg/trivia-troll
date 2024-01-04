@@ -9,14 +9,21 @@ export const getQuestions = async (
     );
     if (response.ok) {
       const data = await response.json();
-      return data.results.map((result: any) => ({
-        category: result.category,
-        type: result.type,
-        difficulty: result.difficulty,
-        question: result.question,
-        correctAnswer: result.correct_answer,
-        incorrectAnswers: result.incorrect_answers,
-      })) as Question[];
+      const decodedQuestions = data.results.map((result: any) => {
+        const parser = new DOMParser();
+        const decodedQuestion = parser.parseFromString(`<!doctype html><body>${result.question}`, 'text/html').body.textContent;
+
+        return {
+          category: result.category,
+          type: result.type,
+          difficulty: result.difficulty,
+          question: decodedQuestion,
+          correctAnswer: result.correct_answer,
+          incorrectAnswers: result.incorrect_answers,
+        };
+      }) as Question[];
+
+      return decodedQuestions;
     } else if (response.status === 429) {
       throw new Error('Too many requests. Try again later.');
     } else {
