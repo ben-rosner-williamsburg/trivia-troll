@@ -15,14 +15,23 @@ const QuestionCard = ({
   const [showCorrectAnswer, setShowCorrectAnswer] = useState<boolean>(false);
   const [showButton, setShowButton] = useState<boolean>(false);
   const [questionIndex, setQuestionIndex] = useState(0);
+  const [shuffledAnswers, setShuffledAnswers] = useState<null | string[]>(null);
 
-  const shuffleAnswers = (
-    correctAnswer: string,
-    incorrect_answers: string[],
-  ) => {
-    const answers = [correctAnswer, ...incorrect_answers];
-    return arrayShuffle(answers);
-  };
+  useEffect(() => {
+    console.log(questions[questionIndex].correctAnswer)
+    const correctAnswer = questions[questionIndex].correctAnswer
+    const incorrectAnswers = questions[questionIndex].incorrectAnswers
+    const answers = [correctAnswer, ...incorrectAnswers];
+    setShuffledAnswers(arrayShuffle(answers))
+  }, [questions, questionIndex]) 
+
+  // const shuffleAnswers = (
+  //   correctAnswer: string,
+  //   incorrect_answers: string[],
+  // ) => {
+  //   const answers = [correctAnswer, ...incorrect_answers];
+  //   return arrayShuffle(answers);
+  // };
 
   useEffect(() => {
     if (questionIndex === 5) {
@@ -62,10 +71,7 @@ const QuestionCard = ({
       {questions.length > 0 && questionIndex < questions.length && (
         <div key={questionIndex}>
           <h2>{questions[questionIndex].question}</h2>
-          {shuffleAnswers(
-            questions[questionIndex].correctAnswer,
-            questions[questionIndex].incorrectAnswers,
-          ).map((answer, idx) => (
+          {shuffledAnswers && shuffledAnswers.map((answer, idx) => (
             <button
               className='answer-buttons'
               key={idx}
