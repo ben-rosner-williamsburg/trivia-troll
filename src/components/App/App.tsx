@@ -20,7 +20,7 @@ function App() {
       const data = await getQuestions(selectedDifficulty);
       setQuestions(data);
     } catch (error) {
-      console.log('ERROR:', error);
+      console.error('ERROR:', error);
     }
   };
 
