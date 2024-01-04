@@ -1,7 +1,7 @@
-import './GamePage.scss'
+import './GamePage.scss';
 import QuestionCard from '../QuestionCard/QuestionCard';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 import Header from '../Header/Header';
 
 const GamePage = ({
@@ -11,30 +11,30 @@ const GamePage = ({
   setScore,
   setQuestions,
 }: any) => {
- 
   const [answeredQuestions, setAnsweredQuestions] = useState<number>(0);
 
-  const navigate = useNavigate()
-  
+  const navigate = useNavigate();
+
   const increaseScore = () => {
     setScore((prevScore: number) => {
       const newScore = prevScore + 1;
       console.log('New Score:', newScore);
       return newScore;
     });
-  }
+  };
 
   const handleScoreUpdate = () => {
     setAnsweredQuestions((prevCount: number) => prevCount + 1);
   };
-  
-    if (answeredQuestions === 5) {
-      setTimeout(() => {navigate("/end")}, 1500);
-    }
 
+  if (answeredQuestions === 5) {
+    setTimeout(() => {
+      navigate('/end');
+    }, 1500);
+  }
 
   return (
-    <main className='game-page'>
+    <main className="game-page">
       <Header />
       <QuestionCard
         questionInfo={questionInfo}

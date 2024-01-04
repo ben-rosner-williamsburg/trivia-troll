@@ -41,7 +41,7 @@ const QuestionCard = ({
     if (answer === correctAnswer) {
       increaseScore();
     }
-    handleScoreUpdate()
+    handleScoreUpdate();
     setAnswerSelected(true);
   };
 
@@ -54,13 +54,13 @@ const QuestionCard = ({
           setQuestionIndex(questionIndex + 1);
           setShowCorrectAnswer(false);
           setShowButton(false);
-          setAnswerSelected(false)
+          setAnswerSelected(false);
         }
       } else {
         setQuestionIndex(questionIndex + 1);
         setShowCorrectAnswer(false);
         setShowButton(false);
-        setAnswerSelected(false)
+        setAnswerSelected(false);
       }
     } catch (error) {
       console.error('Error fetching new question:', error);
