@@ -1,12 +1,12 @@
+import './QuestionCard.scss'
 import { QuestionCardProps } from '../../types';
 import arrayShuffle from 'array-shuffle';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { getQuestions } from '../../apiCall';
 
 const QuestionCard = ({
   questions,
   selectedDifficulty,
-  setScore,
   setQuestions,
   increaseScore,
   handleScoreUpdate,
@@ -23,6 +23,12 @@ const QuestionCard = ({
     const answers = [correctAnswer, ...incorrect_answers];
     return arrayShuffle(answers);
   };
+
+  useEffect(() => {
+    if (questionIndex === 5) {
+      setShowButton(false);
+    }
+  }, [questionIndex]);
 
   const handleAnswerClick = (answer: string, correctAnswer: string) => {
     setCorrectAnswer(correctAnswer);
@@ -52,7 +58,7 @@ const QuestionCard = ({
   };
 
   return (
-    <main>
+    <main className="question-card">
       {questions.length > 0 && questionIndex < questions.length && (
         <div key={questionIndex}>
           <h2>{questions[questionIndex].question}</h2>
@@ -61,6 +67,7 @@ const QuestionCard = ({
             questions[questionIndex].incorrectAnswers,
           ).map((answer, idx) => (
             <button
+              className='answer-buttons'
               key={idx}
               onClick={() =>
                 handleAnswerClick(

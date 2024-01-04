@@ -1,0 +1,33 @@
+.question-card {
+  text-align: center;
+  margin-top: 10%;
+  background-color: #f3e6d8;
+  width: 50%;
+  border-radius: 10px;
+  font-family: 'Irish grover';
+  margin-left: 26%;
+  color: #3a5260;
+  font-size: 1.5em
+}
+
+.answer-buttons {
+  background-color: #4f453e;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Irish grover';
+  color: #dbd9cf;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 1em;
+}
+
+.next-question-btn {
+  background-color: #4f453e;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Irish grover';
+  font-size: 1em;
+  color: #dbd9cf;
+  cursor: pointer;
+  margin-bottom: 5px
+}
