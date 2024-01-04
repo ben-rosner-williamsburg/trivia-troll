@@ -1,0 +1,31 @@
+.error-page-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #3a5260;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.error-message {
+  font-size: 2.175em;
+  color: #F3E6D8;
+  border-radius: 20px;
+  width: 50%;
+  height: 9.6875em;
+  font-family: 'Irish grover'; 
+}
+
+.return-to-game-btn {
+    background-color: #4f453e;
+    border: none;
+    border-radius: 15px;
+    width: 30vw;
+    height: 2em;
+    font-size: 3.5em;
+    font-family: 'Irish grover';
+    margin: 2vw;
+    color: #dbd9cf;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px #473a31;
+ }

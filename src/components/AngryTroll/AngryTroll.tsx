@@ -1,9 +1,10 @@
 import EndPageTroll from '../../Images/Subject.png'
+import "./AngryTroll.scss"
 
 const AngryTroll = () => {
   
   return (
-    <img src={EndPageTroll} />
+    <img className="angry-troll-img" src={EndPageTroll} />
   )
 }
 
