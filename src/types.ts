@@ -14,5 +14,5 @@ export interface QuestionCardProps {
   setScore: (score: number) => void;
   setQuestions: (questions: Question[]) => void;
   increaseScore: () => void;
-  handleScoreUpdate: () => void 
+  handleScoreUpdate: () => void; 
 }
