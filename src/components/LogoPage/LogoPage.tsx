@@ -11,6 +11,7 @@ const LogoPage = () => {
         </div>
         <div className='text-wrapper'>
           <h1 className='trivia-troll-logo-title'>Trivia Troll</h1>
+          <p className='app-description'>Answer Questions to pass the Troll's bridge!</p>
           <Link to='/main'>
             <button className='enter-game-btn'>Enter</button>
           </Link>
