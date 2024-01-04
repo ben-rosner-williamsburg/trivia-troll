@@ -1,11 +1,8 @@
-import EndPageTroll from '../../Images/Subject.png'
-import "./AngryTroll.scss"
+import EndPageTroll from '../../Images/Subject.png';
+import './AngryTroll.scss';
 
 const AngryTroll = () => {
-  
-  return (
-    <img className="angry-troll-img" src={EndPageTroll} />
-  )
-}
+  return <img className="angry-troll-img" src={EndPageTroll} />;
+};
 
-export default AngryTroll
+export default AngryTroll;

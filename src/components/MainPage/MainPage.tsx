@@ -1,11 +1,11 @@
-import './MainPage.scss'
+import './MainPage.scss';
 import { Link } from 'react-router-dom';
 import DropDownMenu from '../DropDownMenu/DropDownMenu';
-import Header from '../Header/Header'
+import Header from '../Header/Header';
 
 const MainPage = ({ setSelectedDifficulty }: any) => {
   return (
-    <main className='main-page'>
+    <main className="main-page">
       <Header />
       <DropDownMenu setSelectedDifficulty={setSelectedDifficulty} />
       <Link to="/game">
