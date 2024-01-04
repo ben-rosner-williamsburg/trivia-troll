@@ -48,9 +48,13 @@ const QuestionCard = ({
         if (newQuestions && newQuestions.length > 0) {
           setQuestions(newQuestions);
           setQuestionIndex(questionIndex + 1);
+          setShowCorrectAnswer(false); 
+          setShowButton(false);
         }
       } else {
         setQuestionIndex(questionIndex + 1);
+        setShowCorrectAnswer(false); 
+        setShowButton(false);
       }
     } catch (error) {
       console.error('Error fetching new question:', error);
