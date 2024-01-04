@@ -16,13 +16,7 @@ const QuestionCard = ({
   const [showButton, setShowButton] = useState<boolean>(false);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>([]);
-
-  // useEffect(() => {
-  //   const correctAnswer = questions[questionIndex].correctAnswer;
-  //   const incorrectAnswers = questions[questionIndex].incorrectAnswers;
-  //   const answers = [correctAnswer, ...incorrectAnswers];
-  //   setShuffledAnswers(arrayShuffle(answers));
-  // }, [questions, questionIndex]);
+  const [answerSelected, setAnswerSelected] = useState<boolean>(false);
 
   useEffect(() => {
     if (questions[questionIndex]) {
@@ -47,7 +41,8 @@ const QuestionCard = ({
     if (answer === correctAnswer) {
       increaseScore();
     }
-    handleScoreUpdate();
+    handleScoreUpdate()
+    setAnswerSelected(true);
   };
 
   const handleButtonClick = async () => {
@@ -59,11 +54,13 @@ const QuestionCard = ({
           setQuestionIndex(questionIndex + 1);
           setShowCorrectAnswer(false);
           setShowButton(false);
+          setAnswerSelected(false)
         }
       } else {
         setQuestionIndex(questionIndex + 1);
         setShowCorrectAnswer(false);
         setShowButton(false);
+        setAnswerSelected(false)
       }
     } catch (error) {
       console.error('Error fetching new question:', error);
@@ -86,6 +83,7 @@ const QuestionCard = ({
                     questions[questionIndex].correctAnswer,
                   )
                 }
+                disabled={answerSelected}
               >
                 {answer}
               </button>
