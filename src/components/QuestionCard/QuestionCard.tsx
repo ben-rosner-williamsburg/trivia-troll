@@ -1,4 +1,4 @@
-import './QuestionCard.scss'
+import './QuestionCard.scss';
 import { QuestionCardProps } from '../../types';
 import arrayShuffle from 'array-shuffle';
 import { useState, useEffect } from 'react';
@@ -15,23 +15,23 @@ const QuestionCard = ({
   const [showCorrectAnswer, setShowCorrectAnswer] = useState<boolean>(false);
   const [showButton, setShowButton] = useState<boolean>(false);
   const [questionIndex, setQuestionIndex] = useState(0);
-  const [shuffledAnswers, setShuffledAnswers] = useState<null | string[]>(null);
+  const [shuffledAnswers, setShuffledAnswers] = useState<string[]>([]);
+
+  // useEffect(() => {
+  //   const correctAnswer = questions[questionIndex].correctAnswer;
+  //   const incorrectAnswers = questions[questionIndex].incorrectAnswers;
+  //   const answers = [correctAnswer, ...incorrectAnswers];
+  //   setShuffledAnswers(arrayShuffle(answers));
+  // }, [questions, questionIndex]);
 
   useEffect(() => {
-    console.log(questions[questionIndex].correctAnswer)
-    const correctAnswer = questions[questionIndex].correctAnswer
-    const incorrectAnswers = questions[questionIndex].incorrectAnswers
-    const answers = [correctAnswer, ...incorrectAnswers];
-    setShuffledAnswers(arrayShuffle(answers))
-  }, [questions, questionIndex]) 
-
-  // const shuffleAnswers = (
-  //   correctAnswer: string,
-  //   incorrect_answers: string[],
-  // ) => {
-  //   const answers = [correctAnswer, ...incorrect_answers];
-  //   return arrayShuffle(answers);
-  // };
+    if (questions[questionIndex]) {
+      const correctAnswer = questions[questionIndex].correctAnswer;
+      const incorrectAnswers = questions[questionIndex].incorrectAnswers;
+      const answers = [correctAnswer, ...incorrectAnswers];
+      setShuffledAnswers(arrayShuffle(answers));
+    }
+  }, [questions, questionIndex]);
 
   useEffect(() => {
     if (questionIndex === 5) {
@@ -57,12 +57,12 @@ const QuestionCard = ({
         if (newQuestions && newQuestions.length > 0) {
           setQuestions(newQuestions);
           setQuestionIndex(questionIndex + 1);
-          setShowCorrectAnswer(false); 
+          setShowCorrectAnswer(false);
           setShowButton(false);
         }
       } else {
         setQuestionIndex(questionIndex + 1);
-        setShowCorrectAnswer(false); 
+        setShowCorrectAnswer(false);
         setShowButton(false);
       }
     } catch (error) {
@@ -75,20 +75,22 @@ const QuestionCard = ({
       {questions.length > 0 && questionIndex < questions.length && (
         <div key={questionIndex}>
           <h2>{questions[questionIndex].question}</h2>
-          {shuffledAnswers && shuffledAnswers.map((answer, idx) => (
-            <button
-              className='answer-buttons'
-              key={idx}
-              onClick={() =>
-                handleAnswerClick(
-                  answer,
-                  questions[questionIndex].correctAnswer,
-                )
-              }
-            >
-              {answer}
-            </button>
-          ))}
+          {shuffledAnswers.length > 0 &&
+            shuffledAnswers.map((answer, idx) => (
+              <button
+                className="answer-buttons"
+                key={idx}
+                onClick={() =>
+                  handleAnswerClick(
+                    answer,
+                    questions[questionIndex].correctAnswer,
+                  )
+                }
+              >
+                {answer}
+              </button>
+            ))}
+
           {showCorrectAnswer && (
             <div>
               <p>Correct Answer: {correctAnswer}</p>
