@@ -12,14 +12,17 @@ export const getQuestions = async (
       const decodedQuestions = data.results.map((result: any) => {
         const parser = new DOMParser();
         const decodedQuestion = parser.parseFromString(`<!doctype html><body>${result.question}`, 'text/html').body.textContent;
-
+        const decodedCorrectAnswer = parser.parseFromString(`<!doctype html><body>${result.correct_answer}`, 'text/html').body.textContent;
+        const decodedIncorrectAnswers = result.incorrect_answers.map((answer: string) => {
+          return parser.parseFromString(`<!doctype html><body>${answer}`, 'text/html').body.textContent;
+        });
         return {
           category: result.category,
           type: result.type,
           difficulty: result.difficulty,
           question: decodedQuestion,
-          correctAnswer: result.correct_answer,
-          incorrectAnswers: result.incorrect_answers,
+          correctAnswer: decodedCorrectAnswer,
+          incorrectAnswers: decodedIncorrectAnswers
         };
       }) as Question[];
 
