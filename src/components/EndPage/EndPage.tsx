@@ -1,4 +1,4 @@
-import TrollBridge from '../../Images/troll-bridge.png'
+import TrollBridge from '../../Images/troll-bridge.png';
 import './EndPage.scss';
 import { useNavigate } from 'react-router-dom';
 import Header from '../Header/Header';

@@ -43,7 +43,7 @@ const QuestionCard = ({
     }
     handleScoreUpdate();
     setAnswerSelected(true);
-    
+
     if (questionIndex === 4) {
       setShowButton(false);
     }
@@ -90,7 +90,6 @@ const QuestionCard = ({
                 {answer}
               </button>
             ))}
-
           {showCorrectAnswer && (
             <div>
               <p>Correct Answer: {correctAnswer}</p>
