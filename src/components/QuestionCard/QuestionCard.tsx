@@ -13,7 +13,7 @@ const QuestionCard = ({
 }: QuestionCardProps) => {
   const [correctAnswer, setCorrectAnswer] = useState<string>('');
   const [showCorrectAnswer, setShowCorrectAnswer] = useState<boolean>(false);
-  const [showButton, setShowButton] = useState<boolean>(false);
+  const [showButton, setShowButton] = useState<boolean>(true);
   const [questionIndex, setQuestionIndex] = useState(0);
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>([]);
   const [answerSelected, setAnswerSelected] = useState<boolean>(false);
@@ -43,6 +43,10 @@ const QuestionCard = ({
     }
     handleScoreUpdate();
     setAnswerSelected(true);
+    
+    if (questionIndex === 4) {
+      setShowButton(false);
+    }
   };
 
   const handleButtonClick = async () => {
@@ -53,13 +57,11 @@ const QuestionCard = ({
           setQuestions(newQuestions);
           setQuestionIndex(questionIndex + 1);
           setShowCorrectAnswer(false);
-          setShowButton(false);
           setAnswerSelected(false);
         }
       } else {
         setQuestionIndex(questionIndex + 1);
         setShowCorrectAnswer(false);
-        setShowButton(false);
         setAnswerSelected(false);
       }
     } catch (error) {
