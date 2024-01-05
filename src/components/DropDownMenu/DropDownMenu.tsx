@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import "./DropDownMenu.scss"
 const DropDownMenu = ({ setSelectedDifficulty }: any) => {
   // const [selectedDifficulty, setSelectedDifficulty] = useState('easy')
 
@@ -11,7 +11,7 @@ const DropDownMenu = ({ setSelectedDifficulty }: any) => {
 
   return (
     <div>
-      <label htmlFor="difficulty-dropdown">Select Difficulty</label>
+      <label className="difficulty-label" htmlFor="difficulty-dropdown">Select Difficulty</label>
       <select id="difficulty-dropdown" onChange={handleDifficultySelection}>
         <option value="easy">Easy</option>
         <option value="medium">Medium</option>
