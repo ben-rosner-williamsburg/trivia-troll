@@ -1,63 +1,65 @@
-[
-  {
-    "type": "multiple",
-    "difficulty": "easy",
-    "category": "Entertainment: Video Games",
-    "question": "Which Kirby game first introduced Copy Abilities?",
-    "correct_answer": "Kirby&#039;s Adventure",
-    "incorrect_answers": [
-      "Kirby Super Star",
-      "Kirby&#039;s Dream Land 2",
-      "Kirby&#039;s Dream Land"
-    ]
-  },
-  {
-    "type": "multiple",
-    "difficulty": "easy",
-    "category": "Entertainment: Music",
-    "question": "What is the frontman&#039;s name of the metal band Megadeth?",
-    "correct_answer": "Dave Mustaine",
-    "incorrect_answers": [
-      "Rob Halford",
-      "Vince Neil",
-      "James Hetfield"
-    ]
-  },
-
-  {
-    "type": "multiple",
-    "difficulty": "easy",
-    "category": "Entertainment: Film",
-    "question": "Which animated movie was first to feature a celebrity as a voice actor?",
-    "correct_answer": "Aladdin",
-    "incorrect_answers": [
-      "The Hunchback of Notre Dame",
-      "Toy Story",
-      "James and the Giant Peach"
-    ]
-  },
-  {
-    "type": "multiple",
-    "difficulty": "easy",
-    "category": "Entertainment: Video Games",
-    "question": "The 'fairy' type made it's debut in which generation of Pokemon core series games?",
-    "correct_answer": "6th",
-    "incorrect_answers": [
-      "7th",
-      "2nd",
-      "4th"
-    ]
-  },
-  {
-    "type": "multiple",
-    "difficulty": "easy",
-    "category": "Entertainment: Video Games",
-    "question": "Satella in 'Re:Zero' is the witch of what?",
-    "correct_answer": "Envy",
-    "incorrect_answers": [
-      "Sloth",
-      "Pride",
-      "Wrath"
-    ]
-  }
-]
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "Which Kirby game first introduced Copy Abilities?",
+      "correct_answer": "Kirby's Adventure",
+      "incorrect_answers": [
+        "Kirby Super Star",
+        "Kirby&#039;s Dream Land 2",
+        "Kirby&#039;s Dream Land"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Music",
+      "question": "What is the frontman's name of the metal band Megadeth?",
+      "correct_answer": "Dave Mustaine",
+      "incorrect_answers": [
+        "Rob Halford",
+        "Vince Neil",
+        "James Hetfield"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Film",
+      "question": "Which animated movie was first to feature a celebrity as a voice actor?",
+      "correct_answer": "Aladdin",
+      "incorrect_answers": [
+        "The Hunchback of Notre Dame",
+        "Toy Story",
+        "James and the Giant Peach"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "The 'fairy' type made it's debut in which generation of Pokemon core series games?",
+      "correct_answer": "6th",
+      "incorrect_answers": [
+        "7th",
+        "2nd",
+        "4th"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "easy",
+      "category": "Entertainment: Video Games",
+      "question": "Satella in 'Re:Zero' is the witch of what?",
+      "correct_answer": "Envy",
+      "incorrect_answers": [
+        "Sloth",
+        "Pride",
+        "Wrath"
+      ]
+    }
+  ]
+}
