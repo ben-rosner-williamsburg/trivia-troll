@@ -1,0 +1,26 @@
+[
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Entertainment: Video Games",
+    "question": "Which Kirby game first introduced Copy Abilities?",
+    "correct_answer": "Kirby&#039;s Adventure",
+    "incorrect_answers": [
+      "Kirby Super Star",
+      "Kirby&#039;s Dream Land 2",
+      "Kirby&#039;s Dream Land"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Entertainment: Music",
+    "question": "What is the frontman&#039;s name of the metal band Megadeth?",
+    "correct_answer": "Dave Mustaine",
+    "incorrect_answers": [
+      "Rob Halford",
+      "Vince Neil",
+      "James Hetfield"
+    ]
+  }
+]
