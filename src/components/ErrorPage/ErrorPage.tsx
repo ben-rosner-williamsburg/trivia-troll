@@ -10,7 +10,7 @@ const ErrorPage = () => {
         {' '}
         Oops you shouldn't be here! Please go back.
       </h1>
-      <Link to="/main">
+      <Link to="/">
         <button className="return-to-game-btn">Return to Game</button>
       </Link>
     </main>

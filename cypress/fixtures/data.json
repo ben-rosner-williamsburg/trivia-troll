@@ -22,5 +22,42 @@
       "Vince Neil",
       "James Hetfield"
     ]
+  },
+
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Entertainment: Film",
+    "question": "Which animated movie was first to feature a celebrity as a voice actor?",
+    "correct_answer": "Aladdin",
+    "incorrect_answers": [
+      "The Hunchback of Notre Dame",
+      "Toy Story",
+      "James and the Giant Peach"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Entertainment: Video Games",
+    "question": "The 'fairy' type made it's debut in which generation of Pokemon core series games?",
+    "correct_answer": "6th",
+    "incorrect_answers": [
+      "7th",
+      "2nd",
+      "4th"
+    ]
+  },
+  {
+    "type": "multiple",
+    "difficulty": "easy",
+    "category": "Entertainment: Video Games",
+    "question": "Satella in 'Re:Zero' is the witch of what?",
+    "correct_answer": "Envy",
+    "incorrect_answers": [
+      "Sloth",
+      "Pride",
+      "Wrath"
+    ]
   }
 ]
