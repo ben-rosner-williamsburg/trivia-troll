@@ -8,16 +8,16 @@ beforeEach(() => {
 
 describe('Logo Page', () => {
   it('should display a title', () => {
-    cy.get("h1").contains("Trivia Troll");
+    cy.get("h1").contains("Trivia Troll").should("be.visible");
   })
   it('should display a logo image', () => {
-    cy.get("img");
+    cy.get("img").should('be.visible');
   })
   it('should display a subheading', () => {
-    cy.get("p").contains("Answer Questions to pass the Troll's bridge!");
+    cy.get("p").contains("Answer Questions to pass the Troll's bridge!").should("be.visible");
   })
   it("should have a button", () => {
-    cy.get("button").contains("Enter");
+    cy.get("button").contains("Enter").should("be.visible");
   })
   it("should lead to main page when button is clicked", () => {
     cy.get("button").click();
