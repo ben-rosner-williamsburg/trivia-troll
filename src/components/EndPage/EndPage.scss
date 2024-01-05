@@ -1,0 +1,34 @@
+* {
+  font-family: 'Irish grover';
+}
+
+.end-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.end-phrase {
+  font-size: 2.25em;
+}
+
+.end-score {
+  font-size: 2em;
+  margin-top: 0%;
+}
+
+.return-to-main {
+  background-color: #4f453e;
+  border: none;
+  border-radius: 15px;
+  width: 20vw;
+  height: 2em;
+  font-size: 2.5em;
+  font-family: 'Irish grover';
+  color: #dbd9cf;
+  // margin-top: 5%;
+  cursor: pointer;
+  box-shadow: 2px 2px 2px 2px #473a31;
+}

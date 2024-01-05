@@ -13,12 +13,14 @@ const EndPage = ({ score }: any) => {
   return (
     <div>
       <Header />
-      <img src={TrollBridge} alt="troll-bridge" className="troll-bridge" />
-      <h4>You've completed all the questions!</h4>
-      <p>Your Score: {scoreData.score}/5</p>
-      <button onClick={backtoMainClick} className="return-to-main">
-        Back to Start
-      </button>
+      <div className="end-container">
+        <img src={TrollBridge} alt="troll-bridge" className="troll-bridge" />
+        <h4 className="end-phrase">You've completed all the questions!</h4>
+        <p className="end-score">Your Score: {scoreData.score}/5</p>
+        <button onClick={backtoMainClick} className="return-to-main">
+          Back to Start
+        </button>
+      </div>
     </div>
   );
 };
