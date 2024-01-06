@@ -30,9 +30,12 @@
   font-size: 2.5em;
   font-family: 'Irish grover';
   color: #dbd9cf;
-  // margin-top: 5%;
   cursor: pointer;
   box-shadow: 2px 2px 2px 2px #473a31;
+}
+
+.return-to-main:hover {
+  background-color: #473a31;
 }
 
 .troll-bridge {

@@ -44,7 +44,8 @@ describe('url changes', () => {
           .get('.next-question-btn')
           .should('exist')
           .click();
-      });
+        });
+        cy.get('.question-card').should('exist')
 
     cy.get('.question-card > div')
       .should('exist')
@@ -62,7 +63,8 @@ describe('url changes', () => {
           .get('.next-question-btn')
           .should('exist')
           .click();
-      });
+        });
+        cy.get('.question-card').should('exist')
 
     cy.get('.question-card > div')
       .should('exist')
@@ -81,6 +83,7 @@ describe('url changes', () => {
           .should('exist')
           .click();
       });
+      cy.get('.question-card').should('exist')
 
     cy.get('.question-card > div')
       .should('exist')
@@ -99,6 +102,7 @@ describe('url changes', () => {
           .should('exist')
           .click();
       });
+      cy.get('.question-card').should('exist')
 
     cy.get('.question-card > div')
       .should('exist')

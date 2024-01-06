@@ -6,7 +6,7 @@ import HappyTroll from '../../Images/HappyTroll.png';
 const LogoPage = () => {
   return (
     <main className="logo-page">
-      <div className="content-wrapper">
+      <div className="wrapper-container">
         <div className="image-wrapper">
           <img
             src={HappyTroll}
