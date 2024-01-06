@@ -32,9 +32,9 @@
 
 @media only screen and (max-width: 768px) {
   .return-to-game-btn {
-    width: 40vw;
+    width: 50vw;
     height: 5em;
-    font-size: 2.8em;
+    font-size: 1.8em;
   }
 }
 
@@ -49,9 +49,9 @@
     text-align: center;
   }
   .return-to-game-btn {
-    width: 50vw;
+    width: 20vw;
     height: 5em;
-    font-size: 1.5em;
+    font-size: 1.0em;
   }
 }
 @media only screen and (max-width: 414px) {
@@ -65,7 +65,7 @@
     text-align: center;
   }
   .return-to-game-btn {
-    width: 50vw;
+    width: 40vw;
     height: 5em;
     font-size: 1.5em;
   }
@@ -85,6 +85,7 @@
     width: 50vw;
     height: 5em;
     font-size: 1.5em;
+    margin: 2vw;
   }
 
 }
@@ -103,10 +104,6 @@
     width: 50vw;
     height: 5em;
     font-size: 1.5em;
-    font-family: 'Irish grover';
-    margin: 2vw;
-    color: #dbd9cf;
-    cursor: pointer;
-    box-shadow: 2px 2px 2px 2px #473a31;
+    font-family: 'Irish grover'
   }
 }
