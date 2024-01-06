@@ -1,12 +1,11 @@
 import './LogoPage.scss';
 import { Link } from 'react-router-dom';
-// import HappyTroll from '../HappyTroll/HappyTroll'
 import HappyTroll from '../../Images/HappyTroll.png';
 
 const LogoPage = () => {
   return (
     <main className="logo-page">
-      <div className="content-wrapper">
+      <div className="wrapper-container">
         <div className="image-wrapper">
           <img
             src={HappyTroll}
