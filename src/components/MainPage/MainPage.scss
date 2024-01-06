@@ -1,9 +1,11 @@
+@import "../../styles/varialbes.scss";
+
 * {
   font-family: 'Irish grover';
 }
 
 .main-page {
-  background-color: #e7f5ed;
+  background-color: $lightGreen;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,7 +26,7 @@ h3 {
 }
 
 .play-btn { 
-  background-color: #4f453e;
+  background-color: $primaryBrown;
   border: none;
   border-radius: 15px;
   width: 20vw;
@@ -34,9 +36,9 @@ h3 {
   color: #dbd9cf;
   margin-top: 5%;
   cursor: pointer;
-  box-shadow: 2px 2px 2px 2px #473a31;
+  box-shadow: 2px 2px 2px 2px $secondaryBrown;
 }
 
 .play-btn:hover {
-  background-color: #473a31;
+  background-color: $secondaryBrown;
 }

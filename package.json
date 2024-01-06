@@ -8,6 +8,8 @@
     "@testing-library/user-event": "^13.5.0",
     "@tsparticles/engine": "^3.0.3",
     "@tsparticles/preset-confetti": "^3.0.2",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.0.3",
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.68",
     "@types/react": "^18.2.46",
