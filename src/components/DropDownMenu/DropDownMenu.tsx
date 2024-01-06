@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import "./DropDownMenu.scss"
 const DropDownMenu = ({ setSelectedDifficulty }: any) => {
-  // const [selectedDifficulty, setSelectedDifficulty] = useState('easy')
 
   const handleDifficultySelection = (
     event: React.ChangeEvent<HTMLSelectElement>,
