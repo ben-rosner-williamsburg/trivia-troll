@@ -1,6 +1,5 @@
 import './LogoPage.scss';
 import { Link } from 'react-router-dom';
-// import HappyTroll from '../HappyTroll/HappyTroll'
 import HappyTroll from '../../Images/HappyTroll.png';
 
 const LogoPage = () => {

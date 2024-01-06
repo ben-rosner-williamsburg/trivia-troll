@@ -7,7 +7,6 @@ const ErrorPage = () => {
     <main className="error-page-container">
       <AngryTroll />
       <h1 className="error-message">
-        {' '}
         Oops you shouldn't be here! Please go back.
       </h1>
       <Link to="/">

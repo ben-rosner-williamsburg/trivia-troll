@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './App.css';
-// import Header from '../Header/Header';
 import LogoPage from '../LogoPage/LogoPage';
 import MainPage from '../MainPage/MainPage';
 import GamePage from '../GamePage/GamePage';
@@ -30,7 +29,6 @@ function App() {
 
   return (
     <main className="App">
-      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<LogoPage />} />
         <Route
