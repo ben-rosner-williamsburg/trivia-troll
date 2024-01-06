@@ -41,3 +41,19 @@
 .troll-bridge {
   height: 40vh;
 }
+
+@media only screen and (max-width: 320px) {
+  .end-container {
+    max-height: 75vh;
+  }
+  .end-phrase {
+    font-size: 1.25em;
+  }
+  .return-to-main{
+    width: 80vw;
+    height: 2.0em;
+  }
+  .troll-bridge {
+    height: 25vh;
+  }
+}
