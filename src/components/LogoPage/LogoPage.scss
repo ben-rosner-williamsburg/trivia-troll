@@ -60,3 +60,138 @@
   padding-top: 25%;
   margin-left: 17%;
 }
+
+@media only screen and (max-width: 768px) {
+  .enter-game-btn {
+    width: 80vw;
+  }
+  .happy-troll-logo-page {
+    width: 200px;
+    margin-left: 75%
+  }
+  .trivia-troll-logo-title {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .app-description {
+    font-size: 2.5em;
+  }
+  .logo-page {
+    background-color: $darkTeal;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .enter-game-btn {
+    width: 80vw;
+  }
+  .happy-troll-logo-page {
+    width: 200px;
+    margin-left: 75%
+  }
+  .trivia-troll-logo-title {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .app-description {
+    font-size: 2.5em;
+  }
+  .logo-page {
+    background-color: $darkTeal;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .enter-game-btn {
+    width: 80vw;
+  }
+  .happy-troll-logo-page {
+    width: 200px;
+    margin-left: 75%
+  }
+  .trivia-troll-logo-title {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .app-description {
+    font-size: 2.5em;
+  }
+  .logo-page {
+    background-color: $darkTeal;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .enter-game-btn {
+    width: 80vw;
+    height: 1.5em;
+  }
+  .happy-troll-logo-page {
+    width: 200px;
+    margin-left: 75%
+  }
+  .trivia-troll-logo-title {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .app-description {
+    font-size: 2.5em;
+  }
+  .logo-page {
+    background-color: $darkTeal;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .enter-game-btn {
+    width: 80vw;
+    height: 2.0em;
+  }
+  .happy-troll-logo-page {
+    width: 200px;
+    margin-left: 75%
+  }
+  .trivia-troll-logo-title {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .app-description {
+    font-size: 2.5em;
+  }
+  .logo-page {
+    background-color: $darkTeal;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .enter-game-btn {
+    width: 80vw;
+    height: 2.0em;
+  }
+  .happy-troll-logo-page {
+    width: 200px;
+    margin-left: 75%
+  }
+  .trivia-troll-logo-title {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .app-description {
+    font-size: 2.5em;
+  }
+  .logo-page {
+    background-color: $darkTeal;
+    height: 100vh;
+  }
+}
