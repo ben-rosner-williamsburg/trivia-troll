@@ -29,3 +29,24 @@
   cursor: pointer;
   box-shadow: 2px 2px 2px 2px #473a31;
 }
+
+@media only screen and (max-width: 320px) {
+  .error-page-container {
+    height: 100vh;
+    flex-direction: column;
+  }
+  .error-message {
+    font-size: 1.875em;
+    width: 85%;
+  }
+  .return-to-game-btn {
+    width: 50vw;
+    height: 5em;
+    font-size: 1.5em;
+    font-family: 'Irish grover';
+    margin: 2vw;
+    color: #dbd9cf;
+    cursor: pointer;
+    box-shadow: 2px 2px 2px 2px #473a31;
+  }
+}

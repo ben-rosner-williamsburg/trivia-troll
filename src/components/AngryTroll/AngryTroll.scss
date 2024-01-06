@@ -5,3 +5,10 @@
   align-self: center;
 }
 
+
+@media only screen and (max-width: 320px) {
+  .angry-troll-img {
+    width: 35vw;
+    height: 20vh;
+  }
+}
