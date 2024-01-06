@@ -49,17 +49,22 @@
 
 
 📱 Mobile and Tablet Views 
+![Mobile View](src/Images/Mobile_View_Trivia_Troll.png)
+![Tablet View](src/Images/Tablet_View_Trivia_Troll.png)
 
 
+<h2 id="wins">💪🏻 Wins </h2>
 
-<h2  id="wins">💪🏻 Wins </h2>
-- learning and implementing typescript 
--
--
--
+ 💪🏻 Learning and implementing typescript 
+  
+ 💪🏻 Getting a better understanding of Cypress.
 
-<h2  id="future-ideas">💡 Future Ideas </h2>
-🔮 Filer by category 
+ 💪🏻 Figuring out repsonsive design
+
+<h2 id="future-ideas">💡 Future Ideas </h2>
+
+🔮 Filter by category 
 
 🔮 Set the amount of questions 
 
+🔮 Progressive difficulty
