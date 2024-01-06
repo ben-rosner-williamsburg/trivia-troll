@@ -1,3 +1,6 @@
+@import "../../styles/varialbes.scss";
+
+
 .error-page-container {
   display: flex;
   justify-content: flex-end;
@@ -9,7 +12,7 @@
 
 .error-message {
   font-size: 2.175em;
-  color: #f3e6d8;
+  color: $ivory;
   border-radius: 20px;
   width: 50%;
   height: 9.6875em;
@@ -17,7 +20,7 @@
 }
 
 .return-to-game-btn {
-  background-color: #4f453e;
+  background-color: $primaryBrown;
   border: none;
   border-radius: 15px;
   width: 30vw;
@@ -25,9 +28,13 @@
   font-size: 3.5em;
   font-family: 'Irish grover';
   margin: 2vw;
-  color: #dbd9cf;
+  color: $ivory;
   cursor: pointer;
-  box-shadow: 2px 2px 2px 2px #473a31;
+  box-shadow: 2px 2px 2px 2px $secondaryBrown;
+}
+
+.return-to-game-btn:hover {
+  background-color: $secondaryBrown 
 }
 
 @media only screen and (max-width: 768px) {

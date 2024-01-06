@@ -1,3 +1,5 @@
+@import "../../styles/varialbes.scss";
+
 * {
   font-family: 'Irish grover';
 }
@@ -22,7 +24,7 @@
 }
 
 .return-to-main {
-  background-color: #4f453e;
+  background-color: $primaryBrown;
   border: none;
   border-radius: 15px;
   width: 20vw;
@@ -31,11 +33,12 @@
   font-family: 'Irish grover';
   color: #dbd9cf;
   cursor: pointer;
-  box-shadow: 2px 2px 2px 2px #473a31;
+  box-shadow: 2px 2px 2px 2px $secondaryBrown;
 }
 
 .return-to-main:hover {
-  background-color: #473a31;
+  background-color: $secondaryBrown;
+  ;
 }
 
 .troll-bridge {

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
-import './App.css';
 import LogoPage from '../LogoPage/LogoPage';
 import MainPage from '../MainPage/MainPage';
 import GamePage from '../GamePage/GamePage';
