@@ -8,12 +8,13 @@
 }
 
 .error-message {
-  font-size: 2.175em;
+  font-size: 3.175em;
   color: #f3e6d8;
   border-radius: 20px;
   width: 50%;
   height: 9.6875em;
   font-family: 'Irish grover';
+  text-align: center;
 }
 
 .return-to-game-btn {
@@ -22,19 +23,37 @@
   border-radius: 15px;
   width: 30vw;
   height: 2em;
-  font-size: 3.5em;
+  font-size: 1.8em;
   font-family: 'Irish grover';
-  margin: 2vw;
+  margin: 3vw;
   color: #dbd9cf;
   cursor: pointer;
   box-shadow: 2px 2px 2px 2px #473a31;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .return-to-game-btn {
     width: 40vw;
-    height: 5em;
-    font-size: 2.8em;
+    height: 3em;
+    font-size: 1.8em;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .error-page-container {
+    height: 100vh;
+    flex-direction: column;
+  }
+  .error-message {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .return-to-game-btn {
+    width: 80vw;
+    height: 3em;
+    font-size: 1.8em;
   }
 }
 
@@ -49,9 +68,9 @@
     text-align: center;
   }
   .return-to-game-btn {
-    width: 50vw;
-    height: 5em;
-    font-size: 1.5em;
+    width: 80vw;
+    height: 3em;
+    font-size: 1.8em;
   }
 }
 @media only screen and (max-width: 414px) {
@@ -65,9 +84,9 @@
     text-align: center;
   }
   .return-to-game-btn {
-    width: 50vw;
-    height: 5em;
-    font-size: 1.5em;
+    width: 80vw;
+    height: 3em;
+    font-size: 1.8em;
   }
 }
 
@@ -82,9 +101,9 @@
     text-align: center;
   }
   .return-to-game-btn {
-    width: 50vw;
-    height: 5em;
-    font-size: 1.5em;
+    width: 80vw;
+    height: 3em;
+    font-size: 1.8em;
   }
 
 }
@@ -100,13 +119,8 @@
     text-align: center;
   }
   .return-to-game-btn {
-    width: 50vw;
-    height: 5em;
-    font-size: 1.5em;
-    font-family: 'Irish grover';
-    margin: 2vw;
-    color: #dbd9cf;
-    cursor: pointer;
-    box-shadow: 2px 2px 2px 2px #473a31;
+    width: 80vw;
+    height: 3em;
+    font-size: 1.8em;
   }
 }

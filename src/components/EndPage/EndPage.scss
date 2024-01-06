@@ -44,6 +44,16 @@
 
 
 @media only screen and (max-width: 768px) {
+  .end-container {
+    height: 80vh;
+  }
+  .end-phrase {
+    font-size: 1.55em;
+    text-align: center;
+  }
+  .return-to-main{
+    width: 80vw;
+  }
   .return-to-main {
     width: 60vw;
   }
