@@ -4,3 +4,46 @@
   height: 70vh;
   align-self: center;
 }
+
+@media only screen and (max-width: 820px) {
+  .angry-troll-img {
+    width: 65vw;
+    height: 80vh;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .angry-troll-img {
+    width: 55vw;
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .angry-troll-img {
+    width: 55vw;
+    height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .angry-troll-img {
+    width: 55vw;
+    height: 40vh;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .angry-troll-img {
+    width: 55vw;
+    height: 40vh;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .angry-troll-img {
+    width: 35vw;
+    height: 20vh;
+  }
+}
+

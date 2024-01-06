@@ -41,3 +41,80 @@
 .troll-bridge {
   height: 40vh;
 }
+
+
+@media only screen and (max-width: 768px) {
+  .return-to-main {
+    width: 60vw;
+  }
+}
+
+
+@media only screen and (max-width: 430px) {
+  .end-container {
+    height: 60vh;
+  }
+  .end-phrase {
+    font-size: 1.55em;
+    text-align: center;
+  }
+  .return-to-main{
+    width: 80vw;
+  }
+  .troll-bridge {
+    height: 20vh;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .end-container {
+    height: 60vh;
+  }
+  .end-phrase {
+    font-size: 1.55em;
+    text-align: center;
+  }
+  .return-to-main{
+    width: 80vw;
+  }
+  .troll-bridge {
+    height: 20vh;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .end-container {
+    height: 60vh;
+  }
+  .end-phrase {
+    font-size: 1.05em;
+    text-align: center;
+  }
+  .return-to-main{
+    width: 80vw;
+    height: 1.5em;
+  }
+  .troll-bridge {
+    height: 20vh;
+  }
+}
+
+
+
+@media only screen and (max-width: 320px) {
+  .end-container {
+    height: 75vh;
+  }
+  .end-phrase {
+    font-size: 1.25em;
+    text-align: center;
+  }
+  .return-to-main{
+    width: 80vw;
+    height: 2.0em;
+  }
+  .troll-bridge {
+    height: 25vh;
+  }
+}
+
