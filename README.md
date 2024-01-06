@@ -46,20 +46,39 @@
 
 <h2  id="preview"> 🎥 Preview 📱 </h2>
 
-
+<img width="1376" alt="Screenshot 2024-01-06 at 2 04 10 PM" src="https://github.com/ben-rosner-williamsburg/trivia-troll/assets/119434450/ab428e5b-92b1-415d-b6bd-0b593aff11fb">
+<img width="1389" alt="Screenshot 2024-01-06 at 2 01 09 PM" src="https://github.com/ben-rosner-williamsburg/trivia-troll/assets/119434450/7d840cd5-2e44-47c9-b589-db0d086a9ac5">
+<img width="1391" alt="Screenshot 2024-01-06 at 2 01 21 PM" src="https://github.com/ben-rosner-williamsburg/trivia-troll/assets/119434450/b2396668-2332-4244-a216-249320c848d8">
+<img width="1390" alt="Screenshot 2024-01-06 at 2 01 38 PM" src="https://github.com/ben-rosner-williamsburg/trivia-troll/assets/119434450/f262f895-7e66-4abd-80fb-bbf76fdd4e6d">
 
 📱 Mobile and Tablet Views 
-![Mobile View](src/Images/Mobile_View_Trivia_Troll.png)
+Mobile:
+<img width="360" alt="Screenshot 2024-01-06 at 2 08 28 PM" src="https://github.com/ben-rosner-williamsburg/trivia-troll/assets/119434450/bfce830f-9bae-43d7-8378-73dfa046a6a3">
+Tablet: 
+
 ![Tablet View](src/Images/Tablet_View_Trivia_Troll.png)
 
 
-<h2 id="wins">💪🏻 Wins </h2>
 
- 💪🏻 Learning and implementing typescript 
+ <h2 id="challenges">💪🏻 Challenges </h2>
+
+💪🏻 Learning a new tech and implementing it in a short period of time 
+
+💪🏻 Implementing responsive design
+
+💪🏻 Having to convert unicode to text that can be read 
+
+<h2 id="wins">🏆 Wins </h2>
+
+ 🏆 Learning and implementing typescript 
   
- 💪🏻 Getting a better understanding of Cypress.
+ 🏆 Getting a better understanding of Cypress.
 
- 💪🏻 Figuring out repsonsive design
+ 🏆 Figuring out repsonsive design
+
+ 🏆 Getting a better understanding of React
+
+ 🏆 Incorporating SASS variables for styles 
 
 <h2 id="future-ideas">💡 Future Ideas </h2>
 
