@@ -60,168 +60,54 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .return-to-game-btn {
-    width: 40vw;
-    height: 5em;
-    font-size: 2.8em;
+  .enter-game-btn {
+    width: 80vw;
+  }
+  .happy-troll-logo-page {
+    width: 200px;
+    margin-left: 75%
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .return-to-main {
-    width: 60vw;
+@media only screen and (max-width: 430px) {
+  .enter-game-btn {
+    width: 80vw;
+  }
+  .happy-troll-logo-page {
+    width: 200px;
+    margin-left: 75%
   }
 }
 
-// @media only screen and (max-width: 768px) {
-//   .return-to-game-btn {
-//     width: 40vw;
-//     height: 5em;
-//     font-size: 2.8em;
-//   }
-// }
+@media only screen and (max-width: 414px) {
+  .enter-game-btn {
+    width: 80vw;
+  }
+  .happy-troll-logo-page {
+    width: 200px;
+    margin-left: 75%
+  }
+}
 
-// @media only screen and (max-width: 430px) {
-//   .error-page-container {
-//     height: 100vh;
-//     flex-direction: column;
-//   }
-//   .error-message {
-//     font-size: 1.875em;
-//     width: 85%;
-//     text-align: center;
-//   }
-//   .return-to-game-btn {
-//     width: 50vw;
-//     height: 5em;
-//     font-size: 1.5em;
-//   }
-// }
-// @media only screen and (max-width: 414px) {
-//   .error-page-container {
-//     height: 100vh;
-//     flex-direction: column;
-//   }
-//   .error-message {
-//     font-size: 1.875em;
-//     width: 85%;
-//     text-align: center;
-//   }
-//   .return-to-game-btn {
-//     width: 50vw;
-//     height: 5em;
-//     font-size: 1.5em;
-//   }
-// }
+@media only screen and (max-width: 375px) {
+  .enter-game-btn {
+    width: 80vw;
+    height: 1.5em;
+  }
+  .happy-troll-logo-page {
+    width: 200px;
+    margin-left: 75%
+  }
+}
 
-// @media only screen and (max-width: 375px) {
-//   .error-page-container {
-//     height: 100vh;
-//     flex-direction: column;
-//   }
-//   .error-message {
-//     font-size: 1.875em;
-//     width: 85%;
-//     text-align: center;
-//   }
-//   .return-to-game-btn {
-//     width: 50vw;
-//     height: 5em;
-//     font-size: 1.5em;
-//   }
-// }
-
-// @media only screen and (max-width: 320px) {
-//   .error-page-container {
-//     height: 100vh;
-//     flex-direction: column;
-//   }
-//   .error-message {
-//     font-size: 1.875em;
-//     width: 85%;
-//     text-align: center;
-//   }
-//   .return-to-game-btn {
-//     width: 50vw;
-//     height: 5em;
-//     font-size: 1.5em;
-//     font-family: 'Irish grover';
-//     margin: 2vw;
-//     color: #dbd9cf;
-//     cursor: pointer;
-//     box-shadow: 2px 2px 2px 2px #473a31;
-//   }
-// }
-// ------------------------------------------
-// @media only screen and (max-width: 768px) {
-//   .return-to-main {
-//     width: 60vw;
-//   }
-// }
-
-// @media only screen and (max-width: 430px) {
-//   .end-container {
-//     height: 60vh;
-//   }
-//   .end-phrase {
-//     font-size: 1.55em;
-//     text-align: center;
-//   }
-//   .return-to-main{
-//     width: 80vw;
-//   }
-//   .troll-bridge {
-//     height: 20vh;
-//   }
-// }
-
-// @media only screen and (max-width: 414px) {
-//   .end-container {
-//     height: 60vh;
-//   }
-//   .end-phrase {
-//     font-size: 1.55em;
-//     text-align: center;
-//   }
-//   .return-to-main{
-//     width: 80vw;
-//   }
-//   .troll-bridge {
-//     height: 20vh;
-//   }
-// }
-
-// @media only screen and (max-width: 375px) {
-//   .end-container {
-//     height: 60vh;
-//   }
-//   .end-phrase {
-//     font-size: 1.05em;
-//     text-align: center;
-//   }
-//   .return-to-main{
-//     width: 80vw;
-//     height: 1.5em;
-//   }
-//   .troll-bridge {
-//     height: 20vh;
-//   }
-// }
-
-// @media only screen and (max-width: 320px) {
-//   .end-container {
-//     height: 75vh;
-//   }
-//   .end-phrase {
-//     font-size: 1.25em;
-//     text-align: center;
-//   }
-//   .return-to-main{
-//     width: 80vw;
-//     height: 2.0em;
-//   }
-//   .troll-bridge {
-//     height: 25vh;
-//   }
-// }
+@media only screen and (max-width: 320px) {
+  .enter-game-btn {
+    width: 80vw;
+    height: 2.0em;
+  }
+  .happy-troll-logo-page {
+    width: 200px;
+    margin-left: 75%
+  }
+}
 
