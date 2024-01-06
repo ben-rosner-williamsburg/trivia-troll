@@ -16,6 +16,42 @@
   font-family: 'Irish grover';
 }
 
+@media only screen and (max-width: 1024px) {
+  .header-text {
+    font-size: 6.8em;
+    text-align: center;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .header-text {
+    font-size: 4.8em;
+    text-align: center;
+  }
+}
+
+
+@media only screen and (max-width: 430px) {
+  .header-text {
+    font-size: 3.5em;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .header-text {
+    font-size: 3.5em;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .header-text{
+    font-size: 2.8em;
+    text-align: center;
+  }
+}
 
 @media only screen and (max-width: 320px) {
   .header-text {
@@ -23,3 +59,6 @@
     text-align: center;
   }
 }
+
+
+

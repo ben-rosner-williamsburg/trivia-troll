@@ -30,6 +30,65 @@
   box-shadow: 2px 2px 2px 2px #473a31;
 }
 
+@media only screen and (max-width: 768px) {
+  .return-to-game-btn {
+    width: 40vw;
+    height: 5em;
+    font-size: 2.8em;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .error-page-container {
+    height: 100vh;
+    flex-direction: column;
+  }
+  .error-message {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .return-to-game-btn {
+    width: 50vw;
+    height: 5em;
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 414px) {
+  .error-page-container {
+    height: 100vh;
+    flex-direction: column;
+  }
+  .error-message {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .return-to-game-btn {
+    width: 50vw;
+    height: 5em;
+    font-size: 1.5em;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .error-page-container {
+    height: 100vh;
+    flex-direction: column;
+  }
+  .error-message {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .return-to-game-btn {
+    width: 50vw;
+    height: 5em;
+    font-size: 1.5em;
+  }
+
+}
+
 @media only screen and (max-width: 320px) {
   .error-page-container {
     height: 100vh;
@@ -38,6 +97,7 @@
   .error-message {
     font-size: 1.875em;
     width: 85%;
+    text-align: center;
   }
   .return-to-game-btn {
     width: 50vw;
