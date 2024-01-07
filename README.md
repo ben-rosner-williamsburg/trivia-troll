@@ -60,14 +60,6 @@ Tablet:
 
 
 
- <h2 id="challenges">💪🏻 Challenges </h2>
-
-💪🏻 Learning a new tech and implementing it in a short period of time 
-
-💪🏻 Implementing responsive design
-
-💪🏻 Having to convert unicode to text that can be read 
-
 <h2 id="wins">🏆 Wins </h2>
 
  🏆 Learning and implementing typescript 
@@ -77,8 +69,17 @@ Tablet:
  🏆 Figuring out repsonsive design
 
  🏆 Getting a better understanding of React
-
+ 
  🏆 Incorporating SASS variables for styles 
+
+ <h2 id="challenges">❌ Challenges </h2>
+
+ ❌ We have many issues with responsive design and deployment.  
+
+ ❌ Eventually we figured out the best way to fix these issues was to use the overflow: overlay rule in our css.
+
+ ❌ Figuring out interfaces was challenging.
+
 
 <h2 id="future-ideas">💡 Future Ideas </h2>
 
@@ -87,3 +88,4 @@ Tablet:
 🔮 Set the amount of questions 
 
 🔮 Progressive difficulty
+
