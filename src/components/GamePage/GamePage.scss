@@ -1,8 +1,9 @@
+@import "../../styles/variables.scss";
+
 .game-page {
-  background-color: #e7f5ed;
+  background-color: $lightGreen;
   height: 100vh;
 }
-
 
 @media only screen and (max-width: 320px) {
   .game-page {

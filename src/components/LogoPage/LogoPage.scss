@@ -1,6 +1,9 @@
+@import "../../styles/variables.scss";
+
 .logo-page {
-  background-color: #3a5260;
+  background-color: $darkTeal;
   height: 100vh;
+  overflow: overlay;
 }
 
 .wrapper-container {
@@ -8,20 +11,22 @@
 }
 
 .image-wrapper {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: flex-end;
+  flex-direction: row;
 }
 
 .happy-troll-logo-page {
   width: 200px;
-  margin-left: 75%
+  margin-left: 75%;
 }
 
 .trivia-troll-logo-title {
   font-size: 7em;
   margin-top: -35%;
   margin-left: 5%;
-  background-color: #dbd9cf;
-  color: #3a5260;
+  background-color: $lightTan;
+  color: $darkTeal;
   border-radius: 20px;
   width: 5em;
   padding: 0.2em 1em;
@@ -29,32 +34,173 @@
 }
 
 .app-description {
-  color: #dbd9cf;
+  color: $lightTan;
   font-size: 2.5em;
   font-family: 'Irish grover';
 }
 
 .enter-game-btn {
-  background-color: #4f453e;
+  background-color: $primaryBrown;
   border: none;
   border-radius: 15px;
   width: 20vw;
   height: 2em;
   font-size: 3.5em;
   font-family: 'Irish grover';
-  color: #dbd9cf;
+  color: $lightTan;
   margin-top: 5%;
   margin-left: 27%;
   cursor: pointer;
-  box-shadow: 2px 2px 2px 2px #473a31;
+  box-shadow: 2px 2px 2px 2px $secondaryBrown;
 }
 
 .enter-game-btn:hover {
-  background-color: #473a31;
+  background-color: $secondaryBrown;
 }
 
 .text-wrapper {
   display: inline-block;
   padding-top: 25%;
   margin-left: 17%;
+}
+
+@media only screen and (max-width: 1440px) {
+  .wrapper-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+  }
+  .trivia-troll-logo-title {
+    margin-top: -1.2em;
+  }
+  .happy-troll-logo-page {
+    margin-top: -0.8em;
+  }
+  .text-wrapper {
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .enter-game-btn {
+    margin: 0;
+  }
+  .app-description {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .enter-game-btn { 
+    width: 95%;
+  }
+  .trivia-troll-logo-title {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+
+  .app-description {
+    font-size: 2.5em;
+    text-align: center;
+  }
+
+  .logo-page {
+    background-color: $darkTeal;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .enter-game-btn { 
+    width: 95%;
+  }
+  .trivia-troll-logo-title {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .app-description {
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .logo-page {
+    background-color: $darkTeal;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .enter-game-btn { 
+    width: 80vw;
+  }
+  .trivia-troll-logo-title {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .app-description {
+    font-size: 2.5em;
+  }
+  .logo-page {
+    background-color: $darkTeal;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .enter-game-btn {
+    width: 80vw;
+    height: 1.5em;
+    font-size: 1.5em;
+  }
+  .trivia-troll-logo-title {
+    font-size: 1.875em;
+    margin-top: .1%;
+    width: 85%;
+    text-align: center;
+    width: 57%
+  }
+  .app-description {
+    font-size: 1.5em;
+    text-align: center;
+    margin-right: 13%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .enter-game-btn {
+    width: 80vw;
+    height: 2.0em;
+  }
+  .trivia-troll-logo-title {
+    font-size: 2em;
+    width: 85%;
+    text-align: center;
+  }
+  .app-description {
+    font-size: 2.5em;
+    text-align: center;
+  }
+  .logo-page {
+    background-color: $darkTeal;
+    height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .enter-game-btn { 
+    width: 80vw;
+  }
+  .trivia-troll-logo-title {
+    font-size: 1.875em;
+    width: 85%;
+    text-align: center;
+  }
+  .app-description {
+    font-size: 2.5em;
+    text-align: center;
+  }
 }

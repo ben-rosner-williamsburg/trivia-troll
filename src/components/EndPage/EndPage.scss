@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 * {
   font-family: 'Irish grover';
 }
@@ -22,20 +24,21 @@
 }
 
 .return-to-main {
-  background-color: #4f453e;
+  background-color: $primaryBrown;
   border: none;
   border-radius: 15px;
-  width: 20vw;
+  width: 80vw;
   height: 2.5em;
   font-size: 2.5em;
   font-family: 'Irish grover';
   color: #dbd9cf;
   cursor: pointer;
-  box-shadow: 2px 2px 2px 2px #473a31;
+  box-shadow: 2px 2px 2px 2px $secondaryBrown;
 }
 
 .return-to-main:hover {
-  background-color: #473a31;
+  background-color: $secondaryBrown;
+  ;
 }
 
 .troll-bridge {
@@ -51,11 +54,8 @@
     font-size: 1.55em;
     text-align: center;
   }
-  .return-to-main{
-    width: 80vw;
-  }
   .return-to-main {
-    width: 60vw;
+    width: 80vw;
   }
 }
 
@@ -72,7 +72,7 @@
     width: 80vw;
   }
   .troll-bridge {
-    height: 20vh;
+    height: 25vh;
   }
 }
 
@@ -124,7 +124,7 @@
     height: 2.0em;
   }
   .troll-bridge {
-    height: 25vh;
+    height: 15vh;
   }
 }
 

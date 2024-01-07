@@ -1,15 +1,17 @@
+@import "../../styles/variables.scss";
+
 .header {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: row;
-  background-color: #3a5260;
+  background-color: $darkTeal;
   height: 18vh;
 }
 
 .header-text {
   font-size: 4.5em;
-  color: #f3e6d8;
+  color: $ivory;
   border-radius: 20px;
   width: 37.4375em;
   margin-left: 1.4vw;
@@ -18,11 +20,10 @@
 
 @media only screen and (max-width: 1024px) {
   .header-text {
-    font-size: 4.8em;
+    font-size: 4.5em;
     text-align: center;
   }
 }
-
 
 @media only screen and (max-width: 768px) {
   .header-text {
