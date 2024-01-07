@@ -55,11 +55,21 @@
 
 <h2 id="wins">💪🏻 Wins </h2>
 
- 💪🏻 Learning and implementing typescript 
+ 💪🏻 Learning and implementing TypeScript 
   
  💪🏻 Getting a better understanding of Cypress.
 
- 💪🏻 Figuring out repsonsive design
+ 💪🏻 Figuring out responsive design
+
+ <h2 id="challenges">❌ Challenges </h2>
+
+ ❌ We have many issues with responsive design and deployment.  
+
+ ❌ Eventually we figured out the best way to fix these issues was to use the overflow: overlay rule in our css.
+
+ ❌ Figuring out interfaces was challenging.
+
+
 
 <h2 id="future-ideas">💡 Future Ideas </h2>
 
@@ -68,3 +78,4 @@
 🔮 Set the amount of questions 
 
 🔮 Progressive difficulty
+
