@@ -11,7 +11,9 @@
 }
 
 .image-wrapper {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: flex-end;
+  flex-direction: row;
 }
 
 .happy-troll-logo-page {
@@ -71,10 +73,10 @@
     padding: 40px 20px;
   }
   .trivia-troll-logo-title {
-    margin-top: -1.7em;
+    margin-top: -1.2em;
   }
   .happy-troll-logo-page {
-    margin-top: -1.7em;
+    margin-top: -0.8em;
   }
   .text-wrapper {
     margin: 0;
@@ -132,7 +134,7 @@
 
 @media only screen and (max-width: 414px) {
   .enter-game-btn { 
-    width: 80%;
+    width: 80vw;
   }
   .trivia-troll-logo-title {
     font-size: 1.875em;
@@ -150,9 +152,9 @@
 
 @media only screen and (max-width: 375px) {
   .enter-game-btn {
-    width: 30vw;
+    width: 80vw;
     height: 1.5em;
-    font-size: 1.5em
+    font-size: 1.5em;
   }
   .trivia-troll-logo-title {
     font-size: 1.875em;
@@ -190,7 +192,7 @@
 
 @media only screen and (max-width: 280px) {
   .enter-game-btn { 
-    width: 80%;
+    width: 80vw;
   }
   .trivia-troll-logo-title {
     font-size: 1.875em;
