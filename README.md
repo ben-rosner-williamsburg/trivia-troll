@@ -42,7 +42,7 @@
 5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 6. You can also view the project <a href="https://trivia-troll.vercel.app/">here</a>.
 7. Use control C to stop the server.
-8. To test, run the command `npm run cypress`.
+8. To test, run the command `npx cypress open`.
 
 <h2  id="preview"> 🎥 Preview 📱 </h2>
 
