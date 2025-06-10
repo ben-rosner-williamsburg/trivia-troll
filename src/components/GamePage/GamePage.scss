@@ -10,6 +10,7 @@
   padding: 1rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding-top: 2rem;
 }
 
 .no-questions {
@@ -25,12 +26,24 @@
 
 @media only screen and (max-width: 768px) {
   .game-content {
+    padding: 1rem 0.5rem;
+    padding-top: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .game-content {
     padding: 0.5rem;
+    padding-top: 1rem;
   }
 }
 
 @media only screen and (max-width: 320px) {
   .game-page {
     min-height: 100vh;
+  }
+  
+  .game-content {
+    padding-top: 0.5rem;
   }
 }

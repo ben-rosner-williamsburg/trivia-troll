@@ -14,9 +14,10 @@
 h3 {
   font-size: 4.5em;
   text-align: center;
-  margin: auto;
+  margin: 2rem auto 1rem auto;
   color: $darkTeal;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 1rem;
 }
 
 .choose-and-play-menu {
@@ -26,6 +27,7 @@ h3 {
   justify-content: center;
   margin-bottom: 250px;
   gap: 2rem;
+  padding: 1rem;
 }
 
 .play-btn { 
@@ -82,7 +84,8 @@ h3 {
 
 @media only screen and (max-width: 1024px) {
   h3 {
-    font-size: 3.8em;
+    font-size: 3.2em;
+    margin: 1.5rem auto 1rem auto;
   }
   .choose-and-play-menu {
     display: flex;
@@ -98,11 +101,13 @@ h3 {
 
 @media only screen and (max-width: 768px) {
   h3 {
-    font-size: 1.8em;
+    font-size: 2.4em;
+    margin: 1rem auto 0.5rem auto;
   }
   .choose-and-play-menu {
     display: flex;
     text-align: center;
+    margin-bottom: 100px;
   }
   .play-btn { 
     width: 50vw;
@@ -122,11 +127,13 @@ h3 {
 
 @media only screen and (max-width: 425px) {
   h3 {
-    font-size: 1.8em;
+    font-size: 2em;
+    margin: 0.5rem auto 0.5rem auto;
   }
   .choose-and-play-menu {
     display: flex;
     text-align: center;
+    margin-bottom: 50px;
   }
   .play-btn { 
     width: 50vw;
@@ -138,10 +145,12 @@ h3 {
 @media only screen and (max-width: 375px) {
   h3 {
     font-size: 1.8em;
+    margin: 0.5rem auto 0.5rem auto;
   }
   .choose-and-play-menu {
     display: flex;
     text-align: center;
+    margin-bottom: 30px;
   }
   .play-btn { 
     width: 50vw;

@@ -2,64 +2,86 @@
 
 .header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   flex-direction: row;
   background-color: $darkTeal;
-  height: 18vh;
+  height: 15vh;
+  min-height: 80px;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header-text {
   font-size: 4.5em;
   color: $ivory;
   border-radius: 20px;
-  width: 37.4375em;
+  width: auto;
   margin-left: 1.4vw;
   font-family: 'Irish grover';
+  line-height: 1.1;
 }
 
 @media only screen and (max-width: 1024px) {
-  .header-text {
-    font-size: 4.5em;
-    text-align: center;
+  .header {
+    height: 12vh;
+    min-height: 70px;
   }
-}
-
-@media only screen and (max-width: 768px) {
+  
   .header-text {
     font-size: 3.8em;
     text-align: center;
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .header {
+    height: 10vh;
+    min-height: 60px;
+    padding: 0.25rem 0;
+  }
+  
+  .header-text {
+    font-size: 3.2em;
+    text-align: center;
+    margin-left: 1rem;
+  }
+}
 
 @media only screen and (max-width: 430px) {
+  .header {
+    height: 8vh;
+    min-height: 50px;
+  }
+  
   .header-text {
-    font-size: 3.5em;
+    font-size: 2.8em;
     text-align: center;
   }
 }
 
 @media only screen and (max-width: 414px) {
   .header-text {
-    font-size: 3.5em;
+    font-size: 2.6em;
     text-align: center;
   }
 }
 
 @media only screen and (max-width: 375px) {
+  .header {
+    height: 7vh;
+    min-height: 45px;
+  }
+  
   .header-text{
-    font-size: 2.8em;
+    font-size: 2.2em;
     text-align: center;
   }
 }
 
 @media only screen and (max-width: 320px) {
   .header-text {
-    font-size: 2.8em;
+    font-size: 2em;
     text-align: center;
   }
 }
-
-
-

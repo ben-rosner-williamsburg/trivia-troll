@@ -11,6 +11,7 @@
   justify-content: center;
   padding: 2rem;
   min-height: 80vh;
+  padding-top: 1rem;
 }
 
 .end-phrase {
@@ -120,6 +121,7 @@
 @media only screen and (max-width: 768px) {
   .end-container {
     padding: 1rem;
+    padding-top: 0.5rem;
   }
   
   .end-phrase {
@@ -151,6 +153,7 @@
 @media only screen and (max-width: 430px) {
   .end-container {
     min-height: 70vh;
+    padding-top: 0.25rem;
   }
   
   .end-phrase {
