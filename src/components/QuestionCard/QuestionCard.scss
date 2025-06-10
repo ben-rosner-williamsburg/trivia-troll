@@ -1,43 +1,193 @@
 @import "../../styles/variables.scss";
 
 .question-card {
-  text-align: center;
-  margin-top: 10%;
-  background-color: #f3e6d8;
-  width: 50%;
-  border-radius: 10px;
-  font-family: 'Irish grover';
-  margin-left: 26%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(243, 230, 216, 0.95));
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.question-text {
+  font-family: 'Irish Grover', cursive;
+  font-size: 1.8rem;
   color: $darkTeal;
-  font-size: 1.5em;
+  text-align: center;
+  margin: 1.5rem 0 2rem 0;
+  line-height: 1.4;
 }
 
-.answer-buttons {
-  background-color: #2f2924;
+.answers-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.answer-button {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: linear-gradient(135deg, $primaryBrown, $secondaryBrown);
   border: none;
   border-radius: 15px;
-  font-family: 'Irish grover';
-  color: $lightTan;
+  padding: 1rem 1.5rem;
+  font-family: 'Irish Grover', cursive;
+  color: white;
   cursor: pointer;
-  margin: 5px;
-  font-size: 1em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  min-height: 80px;
 }
 
-.answer-buttons:hover:hover {
-  background-color: $primaryBrown;
+.answer-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.next-question-btn {
-  background-color: #2f2924;
-  border: none;
-  border-radius: 15px;
-  font-family: 'Irish grover';
-  font-size: 1em;
-  color: #dbd9cf;
-  cursor: pointer;
-  margin-bottom: 5px;
+.answer-button:focus {
+  outline: 3px solid #007acc;
+  outline-offset: 2px;
 }
 
-.next-question-btn:hover {
-  background-color: $primaryBrown
+.answer-button.correct {
+  background: linear-gradient(135deg, #27ae60, #2ecc71);
+  animation: correctPulse 0.6s ease-in-out;
+}
+
+.answer-button.incorrect {
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  animation: incorrectShake 0.6s ease-in-out;
+}
+
+.answer-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.answer-button:disabled {
+  cursor: not-allowed;
+}
+
+.answer-letter {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.answer-text {
+  flex: 1;
+  text-align: left;
+  font-size: 1.1rem;
+  line-height: 1.3;
+}
+
+.result-message {
+  text-align: center;
+  padding: 1rem;
+  border-radius: 10px;
+  font-family: 'Irish Grover', cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.result-message.correct {
+  background: linear-gradient(135deg, rgba(39, 174, 96, 0.1), rgba(46, 204, 113, 0.1));
+  color: #27ae60;
+  border: 2px solid rgba(39, 174, 96, 0.3);
+}
+
+.result-message.incorrect {
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(192, 57, 43, 0.1));
+  color: #e74c3c;
+  border: 2px solid rgba(231, 76, 60, 0.3);
+}
+
+.result-icon {
+  font-size: 2rem;
+}
+
+.streak-bonus {
+  font-size: 1rem;
+  color: #f39c12;
+  font-weight: bold;
+}
+
+@keyframes correctPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+@keyframes incorrectShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+@media only screen and (max-width: 768px) {
+  .question-card {
+    padding: 1.5rem;
+    margin: 0 1rem;
+  }
+  
+  .question-text {
+    font-size: 1.4rem;
+  }
+  
+  .answers-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .answer-button {
+    padding: 0.75rem 1rem;
+    min-height: 60px;
+  }
+  
+  .answer-text {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .question-card {
+    padding: 1rem;
+  }
+  
+  .question-text {
+    font-size: 1.2rem;
+  }
+  
+  .answer-button {
+    padding: 0.5rem 0.75rem;
+    min-height: 50px;
+  }
+  
+  .answer-letter {
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+  }
+  
+  .answer-text {
+    font-size: 0.9rem;
+  }
+  
+  .result-message {
+    font-size: 1rem;
+  }
 }

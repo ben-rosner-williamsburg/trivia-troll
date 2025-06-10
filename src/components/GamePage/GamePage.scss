@@ -2,11 +2,35 @@
 
 .game-page {
   background-color: $lightGreen;
-  height: 100vh;
+  min-height: 100vh;
+  padding-bottom: 2rem;
+}
+
+.game-content {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.no-questions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  font-family: 'Irish Grover', cursive;
+  font-size: 1.5rem;
+  color: $darkTeal;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .game-content {
+    padding: 0.5rem;
+  }
 }
 
 @media only screen and (max-width: 320px) {
   .game-page {
-    height: 100vh;
+    min-height: 100vh;
   }
 }

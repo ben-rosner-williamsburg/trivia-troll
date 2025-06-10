@@ -2,5 +2,40 @@ $primaryBrown: #4f453e;
 $secondaryBrown: #473a31;
 $lightTan: #dbd9cf;
 $ivory: #f3e6d8;
-$darkTeal:  #3a5260;
+$darkTeal: #3a5260;
 $lightGreen: #e7f5ed;
+
+// New color additions for enhanced UI
+$success: #27ae60;
+$warning: #f39c12;
+$error: #e74c3c;
+$info: #3498db;
+
+// Gradients
+$primaryGradient: linear-gradient(135deg, $primaryBrown, $secondaryBrown);
+$successGradient: linear-gradient(135deg, #27ae60, #2ecc71);
+$errorGradient: linear-gradient(135deg, #e74c3c, #c0392b);
+
+// Shadows
+$cardShadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+$buttonShadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+$hoverShadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+
+// Transitions
+$defaultTransition: all 0.3s ease;
+$fastTransition: all 0.2s ease;
+$slowTransition: all 0.5s ease;
+
+// Border radius
+$smallRadius: 8px;
+$mediumRadius: 15px;
+$largeRadius: 20px;
+$circleRadius: 50%;
+
+// Spacing
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+$spacing-xxl: 3rem;

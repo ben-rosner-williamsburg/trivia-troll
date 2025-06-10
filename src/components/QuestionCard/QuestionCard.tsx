@@ -1,111 +1,134 @@
-import './QuestionCard.scss';
-import { QuestionCardProps } from '../../types';
+import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useGame } from '../../context/GameContext';
+import CategoryBadge from '../CategoryBadge/CategoryBadge';
 import arrayShuffle from 'array-shuffle';
-import { useState, useEffect } from 'react';
-import { getQuestions } from '../../apiCall';
+import './QuestionCard.scss';
 
-const QuestionCard = ({
-  questions,
-  selectedDifficulty,
-  setQuestions,
-  increaseScore,
-  handleScoreUpdate,
-}: QuestionCardProps) => {
-  const [correctAnswer, setCorrectAnswer] = useState<string>('');
-  const [showCorrectAnswer, setShowCorrectAnswer] = useState<boolean>(false);
-  const [showButton, setShowButton] = useState<boolean>(true);
-  const [questionIndex, setQuestionIndex] = useState(0);
+interface QuestionCardProps {
+  resetTimer: () => void;
+}
+
+const QuestionCard: React.FC<QuestionCardProps> = ({ resetTimer }) => {
+  const { state, dispatch } = useGame();
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>([]);
-  const [answerSelected, setAnswerSelected] = useState<boolean>(false);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [showResult, setShowResult] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
+
+  const currentQuestion = state.questions[state.currentQuestionIndex];
 
   useEffect(() => {
-    if (questions[questionIndex]) {
-      const correctAnswer = questions[questionIndex].correctAnswer;
-      const incorrectAnswers = questions[questionIndex].incorrectAnswers;
-      const answers = [correctAnswer, ...incorrectAnswers];
+    if (currentQuestion) {
+      const answers = [currentQuestion.correctAnswer, ...currentQuestion.incorrectAnswers];
       setShuffledAnswers(arrayShuffle(answers));
+      setSelectedAnswer(null);
+      setShowResult(false);
     }
-  }, [questions, questionIndex]);
+  }, [currentQuestion, state.currentQuestionIndex]);
 
-  useEffect(() => {
-    if (questionIndex === 5) {
-      setShowButton(false);
-    }
-  }, [questionIndex]);
+  const handleAnswerClick = (answer: string) => {
+    if (selectedAnswer) return;
 
-  const handleAnswerClick = (answer: string, correctAnswer: string) => {
-    setCorrectAnswer(correctAnswer);
-    setShowCorrectAnswer(true);
-    setShowButton(true);
+    setSelectedAnswer(answer);
+    const correct = answer === currentQuestion.correctAnswer;
+    setIsCorrect(correct);
+    setShowResult(true);
 
-    if (answer === correctAnswer) {
-      increaseScore();
-    }
-    handleScoreUpdate();
-    setAnswerSelected(true);
+    dispatch({ type: 'ANSWER_QUESTION', payload: { correct } });
 
-    if (questionIndex === 4) {
-      setShowButton(false);
-    }
-  };
-
-  const handleButtonClick = async () => {
-    try {
-      if (questionIndex >= questions.length) {
-        const newQuestions = await getQuestions(selectedDifficulty);
-        if (newQuestions && newQuestions.length > 0) {
-          setQuestions(newQuestions);
-          setQuestionIndex(questionIndex + 1);
-          setShowCorrectAnswer(false);
-          setAnswerSelected(false);
-        }
+    setTimeout(() => {
+      if (state.currentQuestionIndex < state.questions.length - 1) {
+        dispatch({ type: 'NEXT_QUESTION' });
+        resetTimer();
       } else {
-        setQuestionIndex(questionIndex + 1);
-        setShowCorrectAnswer(false);
-        setAnswerSelected(false);
+        dispatch({ type: 'COMPLETE_GAME' });
       }
-    } catch (error) {
-      console.error('Error fetching new question:', error);
-    }
+    }, 2000);
   };
+
+  if (!currentQuestion) {
+    return <div>Loading question...</div>;
+  }
 
   return (
-    <main className="question-card">
-      {questions.length > 0 && questionIndex < questions.length && (
-        <div key={questionIndex}>
-          <h2>{questions[questionIndex].question}</h2>
-          {shuffledAnswers.length > 0 &&
-            shuffledAnswers.map((answer, idx) => (
-              <button
-                className="answer-buttons"
-                key={idx}
-                onClick={() =>
-                  handleAnswerClick(
-                    answer,
-                    questions[questionIndex].correctAnswer,
-                  )
-                }
-                disabled={answerSelected}
+    <motion.div
+      className="question-card"
+      initial={{ scale: 0.9, opacity: 0 }}
+      animate={{ scale: 1, opacity: 1 }}
+      transition={{ duration: 0.3 }}
+    >
+      <CategoryBadge category={currentQuestion.category} />
+      
+      <motion.h2
+        className="question-text"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.2 }}
+      >
+        {currentQuestion.question}
+      </motion.h2>
+
+      <div className="answers-grid">
+        <AnimatePresence>
+          {shuffledAnswers.map((answer, index) => {
+            let buttonClass = 'answer-button';
+            
+            if (showResult) {
+              if (answer === currentQuestion.correctAnswer) {
+                buttonClass += ' correct';
+              } else if (answer === selectedAnswer) {
+                buttonClass += ' incorrect';
+              } else {
+                buttonClass += ' disabled';
+              }
+            }
+
+            return (
+              <motion.button
+                key={`${state.currentQuestionIndex}-${index}`}
+                className={buttonClass}
+                onClick={() => handleAnswerClick(answer)}
+                disabled={!!selectedAnswer}
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ delay: 0.3 + index * 0.1 }}
+                whileHover={!selectedAnswer ? { scale: 1.02 } : {}}
+                whileTap={!selectedAnswer ? { scale: 0.98 } : {}}
+                aria-label={`Answer option: ${answer}`}
               >
-                {answer}
-              </button>
-            ))}
-          {showCorrectAnswer && (
-            <div>
-              <p>Correct Answer: {correctAnswer}</p>
-              {showButton && (
-                <button
-                  className="next-question-btn"
-                  onClick={handleButtonClick}
-                >
-                  Next Question
-                </button>
-              )}
-            </div>
-          )}
-        </div>
-      )}
-    </main>
+                <span className="answer-letter">{String.fromCharCode(65 + index)}</span>
+                <span className="answer-text">{answer}</span>
+              </motion.button>
+            );
+          })}
+        </AnimatePresence>
+      </div>
+
+      <AnimatePresence>
+        {showResult && (
+          <motion.div
+            className={`result-message ${isCorrect ? 'correct' : 'incorrect'}`}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+          >
+            {isCorrect ? (
+              <>
+                <span className="result-icon">🎉</span>
+                <span>Correct! Well done!</span>
+                {state.streak > 1 && <span className="streak-bonus">+{state.streak * 2} streak bonus!</span>}
+              </>
+            ) : (
+              <>
+                <span className="result-icon">😔</span>
+                <span>Incorrect. The answer was: {currentQuestion.correctAnswer}</span>
+              </>
+            )}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
   );
 };
 

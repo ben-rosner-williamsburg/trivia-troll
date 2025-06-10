@@ -1,0 +1,40 @@
+@import "../../styles/variables.scss";
+
+.progress-container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.progress-info {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  font-family: 'Irish Grover', cursive;
+  color: $darkTeal;
+  font-size: 1.1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 12px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, $primaryBrown, $secondaryBrown);
+  border-radius: 6px;
+}
+
+@media only screen and (max-width: 768px) {
+  .progress-info {
+    font-size: 1rem;
+  }
+  
+  .progress-bar {
+    height: 10px;
+  }
+}

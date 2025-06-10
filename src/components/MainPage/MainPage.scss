@@ -6,7 +6,7 @@
 
 .main-page {
   background-color: $lightGreen;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -15,6 +15,8 @@ h3 {
   font-size: 4.5em;
   text-align: center;
   margin: auto;
+  color: $darkTeal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .choose-and-play-menu {
@@ -23,6 +25,7 @@ h3 {
   align-items: center;
   justify-content: center;
   margin-bottom: 250px;
+  gap: 2rem;
 }
 
 .play-btn { 
@@ -34,13 +37,47 @@ h3 {
   font-size: 2.5em;
   font-family: 'Irish grover';
   color: #dbd9cf;
-  margin-top: 5%;
   cursor: pointer;
   box-shadow: 2px 2px 2px 2px $secondaryBrown;
+  transition: all 0.3s ease;
 }
 
 .play-btn:hover {
   background-color: $secondaryBrown;
+  transform: translateY(-2px);
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.play-btn:focus {
+  outline: 3px solid #007acc;
+  outline-offset: 2px;
+}
+
+.difficulty-info {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.difficulty-info p {
+  font-size: 1.5rem;
+  color: $darkTeal;
+  margin-bottom: 0.5rem;
+}
+
+.difficulty-description {
+  font-size: 1.2rem;
+  color: $primaryBrown;
+  font-weight: bold;
+}
+
+.error-message {
+  background-color: #fee;
+  color: #c33;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  text-align: center;
+  border: 1px solid #fcc;
 }
 
 @media only screen and (max-width: 1024px) {
@@ -73,7 +110,16 @@ h3 {
     font-size: 1.5em;
     margin-top: 1.8em;
   }
+  
+  .difficulty-info p {
+    font-size: 1.2rem;
+  }
+  
+  .difficulty-description {
+    font-size: 1rem;
+  }
 }
+
 @media only screen and (max-width: 425px) {
   h3 {
     font-size: 1.8em;
@@ -103,5 +149,3 @@ h3 {
     font-size: 1.5em;
   }
 }
-
-

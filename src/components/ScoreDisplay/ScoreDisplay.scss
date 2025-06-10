@@ -1,0 +1,66 @@
+@import "../../styles/variables.scss";
+
+.score-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 15px;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.score-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Irish Grover', cursive;
+}
+
+.score-label {
+  font-size: 0.9rem;
+  color: $darkTeal;
+  margin-bottom: 0.25rem;
+}
+
+.score-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: $primaryBrown;
+}
+
+.streak {
+  .score-value {
+    color: #e74c3c;
+    text-shadow: 0 0 10px rgba(231, 76, 60, 0.3);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .score-display {
+    gap: 1rem;
+    padding: 0.75rem;
+  }
+  
+  .score-label {
+    font-size: 0.8rem;
+  }
+  
+  .score-value {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .score-display {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .score-item {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../styles/variables.scss";
+
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.timer-display {
+  margin-bottom: 0.5rem;
+}
+
+.timer-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: $darkTeal;
+  font-family: 'Irish Grover', cursive;
+}
+
+.timer-warning {
+  color: #e74c3c;
+}
+
+.timer-bar {
+  width: 200px;
+  height: 8px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timer-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #27ae60, #2ecc71);
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.timer-fill-warning {
+  background: linear-gradient(90deg, #e74c3c, #c0392b);
+}
+
+@media only screen and (max-width: 768px) {
+  .timer-text {
+    font-size: 1.5rem;
+  }
+  
+  .timer-bar {
+    width: 150px;
+    height: 6px;
+  }
+}
