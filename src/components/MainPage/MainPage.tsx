@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useGame } from '../../context/GameContext';
 import { getQuestions } from '../../apiCall';
 import DropDownMenu from '../DropDownMenu/DropDownMenu';
@@ -10,15 +10,23 @@ import './MainPage.scss';
 
 const MainPage: React.FC = () => {
   const { state, dispatch } = useGame();
+  const navigate = useNavigate();
 
   const handlePlayGame = async () => {
+    // Clear any previous errors and set loading state
+    dispatch({ type: 'SET_ERROR', payload: null });
     dispatch({ type: 'SET_LOADING', payload: true });
+    
     try {
       const questions = await getQuestions(state.selectedDifficulty);
       dispatch({ type: 'SET_QUESTIONS', payload: questions });
       dispatch({ type: 'START_GAME' });
+      dispatch({ type: 'SET_LOADING', payload: false });
+      // Only navigate to game page after successful API call
+      navigate('/game');
     } catch (error) {
-      dispatch({ type: 'SET_ERROR', payload: 'Failed to load questions. Please try again.' });
+      dispatch({ type: 'SET_LOADING', payload: false });
+      dispatch({ type: 'SET_ERROR', payload: 'Too many requests. Try again later.' });
     }
   };
 
@@ -59,15 +67,13 @@ const MainPage: React.FC = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Link className="go-play" to="/game">
-              <button 
-                className="play-btn"
-                onClick={handlePlayGame}
-                aria-label={`Start trivia game on ${state.selectedDifficulty} difficulty`}
-              >
-                Play Game
-              </button>
-            </Link>
+            <button 
+              className="play-btn"
+              onClick={handlePlayGame}
+              aria-label={`Start trivia game on ${state.selectedDifficulty} difficulty`}
+            >
+              Play Game
+            </button>
           </motion.div>
           
           <div className="difficulty-info">
