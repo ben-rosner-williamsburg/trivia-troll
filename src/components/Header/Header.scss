@@ -8,8 +8,9 @@
   background-color: $darkTeal;
   height: 15vh;
   min-height: 80px;
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap: 0.5rem;
 }
 
 .header-text {
@@ -17,20 +18,22 @@
   color: $ivory;
   border-radius: 20px;
   width: auto;
-  margin-left: 1.4vw;
   font-family: 'Irish grover';
   line-height: 1.1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 @media only screen and (max-width: 1024px) {
   .header {
     height: 12vh;
     min-height: 70px;
+    padding: 0.5rem 0.75rem;
   }
   
   .header-text {
     font-size: 3.8em;
-    text-align: center;
   }
 }
 
@@ -38,13 +41,24 @@
   .header {
     height: 10vh;
     min-height: 60px;
-    padding: 0.25rem 0;
+    padding: 0.25rem 0.5rem;
+    gap: 0.25rem;
   }
   
   .header-text {
     font-size: 3.2em;
-    text-align: center;
-    margin-left: 1rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .header {
+    height: 9vh;
+    min-height: 55px;
+    padding: 0.25rem 0.5rem;
+  }
+  
+  .header-text {
+    font-size: 2.8em;
   }
 }
 
@@ -55,15 +69,13 @@
   }
   
   .header-text {
-    font-size: 2.8em;
-    text-align: center;
+    font-size: 2.6em;
   }
 }
 
 @media only screen and (max-width: 414px) {
   .header-text {
-    font-size: 2.6em;
-    text-align: center;
+    font-size: 2.4em;
   }
 }
 
@@ -71,17 +83,20 @@
   .header {
     height: 7vh;
     min-height: 45px;
+    padding: 0.25rem 0.25rem;
   }
   
   .header-text{
     font-size: 2.2em;
-    text-align: center;
   }
 }
 
 @media only screen and (max-width: 320px) {
+  .header {
+    min-height: 40px;
+  }
+  
   .header-text {
     font-size: 2em;
-    text-align: center;
   }
 }

@@ -1,4 +1,47 @@
 .happy-troll {
-  height: 17vh;
+  height: auto;
+  width: 60px;
+  max-width: 60px;
+  object-fit: contain;
   margin-left: 5px;
+  flex-shrink: 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  .happy-troll {
+    width: 55px;
+    max-width: 55px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .happy-troll {
+    width: 50px;
+    max-width: 50px;
+    margin-left: 3px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .happy-troll {
+    width: 45px;
+    max-width: 45px;
+    margin-left: 2px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .happy-troll {
+    width: 40px;
+    max-width: 40px;
+    margin-left: 2px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .happy-troll {
+    width: 35px;
+    max-width: 35px;
+    margin-left: 1px;
+  }
 }
